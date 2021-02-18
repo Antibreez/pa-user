@@ -13,7 +13,7 @@
     width: 82px;
     height: 58px;
     background-image: url("../img/cloud-icon.svg");
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
   }
 
@@ -141,6 +141,118 @@
 
       &:nth-child(n) {
         margin-right: 0;
+      }
+    }
+  }
+}
+
+@include tablet {
+  .cloud-card {
+    padding: 0;
+    border: none;
+
+    &__img-block-tablet {
+      display: none;
+    }
+
+    &__img-block-mobile {
+      display: block;
+      width: 120px;
+      margin-right: 15px;
+      margin-bottom: 10px;
+    }
+
+    &__info-1-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    &__title-block {
+      width: calc(100% - 135px);
+      padding-right: 0;
+      margin-bottom: 10px;
+    }
+
+    &__subtitle {
+      @include b11;
+      padding-right: 70px;
+    }
+
+    &__title {
+      @include b15;
+      padding-right: 55px;
+    }
+
+    &__icon {
+      top: 15px;
+      right: 0;
+      width: 51px;
+      height: 36px;
+    }
+
+    &__info-block-1 {
+      margin-bottom: 10px;
+      padding-top: 15px;
+    }
+
+    &__info-1-item {
+      margin-top: 5px;
+
+      &:nth-child(n) {
+        margin-right: 0;
+      }
+    }
+
+    &__info-1 {
+      padding-bottom: 15px;
+      border-bottom: 1px solid $stroke;
+    }
+
+    &__contract-number .info-block__help {
+      width: 15px;
+      height: 15px;
+    }
+
+    &__status {
+      @include h11;
+
+      &::before {
+        transform: translateY(-1px);
+      }
+    }
+
+    &__info-2 {
+      flex-wrap: wrap;
+      margin-bottom: 15px;
+    }
+
+    &__info-2-item {
+      width: calc((100% - 15px) / 2);
+
+      &:nth-child(n) {
+        margin-right: 0;
+        margin-top: 5px;
+      }
+    }
+
+    &__info-3 {
+      & p:first-child {
+        margin-bottom: 5px;
+      }
+
+      & .info-block__desc {
+        display: flex;
+        align-items: center;
+      }
+
+      & .info-block__help {
+        flex-shrink: 0;
+        margin-left: auto;
+      }
+
+      & .info-block__desc span:first-child {
+        margin-right: 15px;
       }
     }
   }

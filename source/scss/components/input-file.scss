@@ -1,0 +1,43 @@
+.input-file {
+  &__label {
+    @include b15;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $text-minor;
+    text-align: center;
+    padding: 15px 20px;
+    border: 1px dashed #dadada;
+    background-color: #fff;
+    border-radius: 5px;
+    order: 2;
+    transition: all 0.3s;
+    margin: 0;
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      border-color: $primary;
+    }
+
+    &.highlight {
+      border-color: $primary;
+    }
+  }
+}
+
+div.input-file__file-load {
+  display: none;
+}
+
+.input-file.loaded .input-file__label {
+  display: none;
+}
+
+.input-file.loaded div.input-file__file-load {
+  display: flex;
+}
+
+.custom-file {
+  display: none;
+}

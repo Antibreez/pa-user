@@ -113,21 +113,101 @@
                 </div>
                 <div class="cloud-card__info-2-item  info-block__item">
                   <p class="info-block__subtitle">Номер договора</p>
-                  <p class="info-block__desc">
+                  <p class="cloud-card__contract-number  info-block__desc">
                     DA2020-11
                     <span class="info-block__help"></span>
                   </p>
                 </div>
               </div>
               <div class="cloud-card__info-3">
-                <p class="info-block__title">Осталось</p>
-                <p class="info-block__desc">Подписка на облачный кондиционер 2 999 руб. / в год<span class="info-block__help"></span></p>
+                <p class="info-block__title">Состав подписки:</p>
+                <p class="info-block__desc">
+                  <span>Подписка на облачный кондиционер 2&nbsp;999&nbsp;руб.&nbsp;/&nbsp;в&nbsp;год</span>
+                  <span class="info-block__help"></span>
+                </p>
               </div>
             </div>
           </section>
           <div class="cloud-device__card-note  input-block" "="">
             <input class="input-text" type="text" placeholder="">
             <label class="input-label">Укажите короткое примечание</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="cloud-device__status  cloud-status">
+        <div class="cloud-status__container  wrapper">
+          <ul class="cloud-status__list">
+            <li class="cloud-status__item  cloud-status__item--payment">
+              <span class="cloud-status__item-name">
+                Ожидается оплата
+              </span>
+              <span class="cloud-status__item-payment-type">Оплата онлайн</span>
+            </li>
+            <li class="cloud-status__item  cloud-status__item--fix">
+              <span class="cloud-status__item-name">
+                Заполните данные монтажной организации
+              </span>
+            </li>
+            <li class="cloud-status__item  cloud-status__item--cloud-plus">
+              <span class="cloud-status__item-name">
+                Ожидается подключение к&nbsp;облаку
+              </span>
+            </li>
+          </ul>
+
+          <div class="cloud-status__card  cloud-status__card--payment">
+            <div class="cloud-status__card-content">
+              <p class="cloud-status__card-title  info-block__title">
+                Ожидается оплата  |  Оплата онлайн  |  1 устройство  |  10 998 руб.
+              </p>
+              <p class="cloud-status__card-desc  info-block__subtitle">
+                  Для оплаты перейдите по ссылке, высланной Вам на адрес электронной почты или нажмите на кнопку слева
+              </p>
+            </div>
+            <a href="#" class="cloud-status__card-btn  btn-primary">Перейти к оплате</a>
+          </div>
+
+          <div class="cloud-status__card  cloud-status__card--installation">
+            <div class="cloud-status__card-content">
+              <p class="cloud-status__card-title  info-block__title">
+                Заполните данные монтажной организации
+              </p>
+              <p class="cloud-status__card-desc  info-block__subtitle">
+                Для активации подписки необходимо указать данные организации, обслуживающей установку кондиционера. Компания Daichi предоставляет гарантийное обслуживание только для кондиционеров, установленных авторизованной монтажной организацией
+              </p>
+            </div>
+            <div class="cloud-status__installation-form">
+              <form>
+                <div class="cloud-status__installation-company  input-block" "="">
+                  <input class="input-text" type="text" placeholder="Не указано">
+                  <label class="input-label">Укажите наименование организации&nbsp;*</label>
+                </div>
+
+                <div class="cloud-status__installation-file  input-file">
+                  <label class="input-file__label">
+                    <input type="file" accept="image/jpeg,image/png,image/gif,application/pdf" name="contract-scan" class="input-file__input  visually-hidden">
+                    <span>Приложите документ, подтверждающий монтаж&nbsp;*
+                  </span></label>
+                  <div class="input-file__file-load  file-load">
+                    <div class="file-load__info">
+                      <p class="file-load__name">Файл 1</p>
+                    </div>
+                    <button type="button" class="file-load__clear">
+                      <svg width="24" height="25" viewBox="0 0 24 25" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.29289 4.7929C4.68341 4.40238 5.31659 4.40238 5.7071 4.7929L19.8492 18.935C20.2398 19.3256 20.2398 19.9587 19.8492 20.3492C19.4587 20.7398 18.8255 20.7398 18.435 20.3492L4.29289 6.20711C3.90237 5.81659 3.90237 5.18342 4.29289 4.7929Z"></path>
+                        <path d="M4.29291 20.3492C4.68344 20.7398 5.31661 20.7398 5.70713 20.3492L19.8493 6.2071C20.2398 5.81659 20.2398 5.18341 19.8493 4.79289C19.4587 4.40237 18.8256 4.40237 18.435 4.79289L4.29291 18.935C3.9024 19.3255 3.90239 19.9587 4.29291 20.3492Z"></path>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+
+                <button class="cloud-status__installation-form-send btn-primary" disabled="">
+                  Отправить
+                </button>
+
+              </form>
+            </div>
           </div>
         </div>
       </div>

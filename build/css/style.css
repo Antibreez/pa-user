@@ -756,6 +756,17 @@ ul li {
   list-style: none;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  margin: -1px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .btn-primary,
 .btn-secondary {
   font-weight: 400;
@@ -1679,6 +1690,12 @@ input.search.js-show-result + .search-close + .search-result {
   }
 }
 
+@media (max-width: 767px) {
+  .breadcrumbs {
+    padding-bottom: 25px;
+  }
+}
+
 .info-block__title {
   font-weight: 400;
   font-size: 15px;
@@ -1719,6 +1736,164 @@ input.search.js-show-result + .search-close + .search-result {
   background-size: cover;
   -webkit-transform: translateY(-2px);
           transform: translateY(-2px);
+}
+
+@media (max-width: 767px) {
+  .info-block__subtitle, .info-block__desc {
+    font-weight: 300;
+    font-size: 11px;
+    line-height: 16px;
+  }
+  .info-block__title {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+  }
+}
+
+.input-file__label {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 23px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #888;
+  text-align: center;
+  padding: 15px 20px;
+  border: 1px dashed #dadada;
+  background-color: #fff;
+  border-radius: 5px;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  margin: 0;
+}
+
+.input-file__label:hover, .input-file__label:focus {
+  cursor: pointer;
+  border-color: #00adef;
+}
+
+.input-file__label.highlight {
+  border-color: #00adef;
+}
+
+div.input-file__file-load {
+  display: none;
+}
+
+.input-file.loaded .input-file__label {
+  display: none;
+}
+
+.input-file.loaded div.input-file__file-load {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.custom-file {
+  display: none;
+}
+
+.file-load {
+  text-decoration: none;
+  color: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 12px;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid #eee;
+  -webkit-transition: border-color 0.3s;
+  transition: border-color 0.3s;
+}
+
+.file-load:hover {
+  border-color: #00adef;
+}
+
+.file-load__pdf-logo {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  margin-right: 20px;
+  background-image: url("../img/pdf.svg");
+}
+
+.file-load__name {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 23px;
+  margin: 0;
+  color: #444;
+}
+
+.file-load__info {
+  padding-right: 10px;
+}
+
+.file-load__size {
+  font-weight: 300;
+  font-size: 11px;
+  line-height: 16px;
+  margin: 0;
+  color: #888;
+}
+
+.file-load__clear {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  border: none;
+  background-color: transparent;
+}
+
+.file-load__clear:hover, .file-load__clear:active, .file-load__clear:focus {
+  background-color: transparent;
+}
+
+.file-load__link, .file-load__clear {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin-left: auto;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  font-size: 0;
+  line-height: 0;
+}
+
+.file-load__link:hover, .file-load__clear:hover {
+  cursor: pointer;
+}
+
+.file-load__link svg, .file-load__clear svg {
+  width: 24px;
+  height: 24px;
+  fill: #94A0B1;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.file-load__link:hover svg, .file-load__clear:hover svg {
+  fill: #00adef;
 }
 
 .menu-pa {
@@ -1786,6 +1961,10 @@ input.search.js-show-result + .search-close + .search-result {
   }
 }
 
+.cloud-device__card {
+  margin-bottom: 25px;
+}
+
 .cloud-device__card-note {
   margin-top: 25px;
 }
@@ -1810,7 +1989,7 @@ input.search.js-show-result + .search-close + .search-result {
   width: 82px;
   height: 58px;
   background-image: url("../img/cloud-icon.svg");
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
 }
 
@@ -1951,4 +2130,243 @@ input.search.js-show-result + .search-close + .search-result {
   .cloud-card__info-1-item:nth-child(n) {
     margin-right: 0;
   }
+}
+
+@media (max-width: 767px) {
+  .cloud-card {
+    padding: 0;
+    border: none;
+  }
+  .cloud-card__img-block-tablet {
+    display: none;
+  }
+  .cloud-card__img-block-mobile {
+    display: block;
+    width: 120px;
+    margin-right: 15px;
+    margin-bottom: 10px;
+  }
+  .cloud-card__info-1-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .cloud-card__title-block {
+    width: calc(100% - 135px);
+    padding-right: 0;
+    margin-bottom: 10px;
+  }
+  .cloud-card__subtitle {
+    font-weight: 300;
+    font-size: 11px;
+    line-height: 16px;
+    padding-right: 70px;
+  }
+  .cloud-card__title {
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 23px;
+    padding-right: 55px;
+  }
+  .cloud-card__icon {
+    top: 15px;
+    right: 0;
+    width: 51px;
+    height: 36px;
+  }
+  .cloud-card__info-block-1 {
+    margin-bottom: 10px;
+    padding-top: 15px;
+  }
+  .cloud-card__info-1-item {
+    margin-top: 5px;
+  }
+  .cloud-card__info-1-item:nth-child(n) {
+    margin-right: 0;
+  }
+  .cloud-card__info-1 {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+  }
+  .cloud-card__contract-number .info-block__help {
+    width: 15px;
+    height: 15px;
+  }
+  .cloud-card__status {
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px;
+  }
+  .cloud-card__status::before {
+    -webkit-transform: translateY(-1px);
+            transform: translateY(-1px);
+  }
+  .cloud-card__info-2 {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-bottom: 15px;
+  }
+  .cloud-card__info-2-item {
+    width: calc((100% - 15px) / 2);
+  }
+  .cloud-card__info-2-item:nth-child(n) {
+    margin-right: 0;
+    margin-top: 5px;
+  }
+  .cloud-card__info-3 p:first-child {
+    margin-bottom: 5px;
+  }
+  .cloud-card__info-3 .info-block__desc {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .cloud-card__info-3 .info-block__help {
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    margin-left: auto;
+  }
+  .cloud-card__info-3 .info-block__desc span:first-child {
+    margin-right: 15px;
+  }
+}
+
+.cloud-status__list {
+  padding: 20px 0;
+  margin: 0;
+  margin-bottom: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cloud-status__item {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  color: #444;
+  width: 220px;
+  text-align: center;
+  padding-top: 63px;
+  background-size: 48px 48px;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.cloud-status__item:not(:last-child) {
+  margin-right: 36px;
+}
+
+.cloud-status__item--payment {
+  background-image: url("../img/rub-icon.svg");
+}
+
+.cloud-status__item--fix {
+  background-image: url("../img/fix-icon.svg");
+}
+
+.cloud-status__item--cloud-plus {
+  background-image: url("../img/cloud-plus-icon.svg");
+}
+
+.cloud-status__item-payment-type {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 23px;
+  color: #888;
+  display: block;
+  margin-top: 5px;
+}
+
+.cloud-status__card {
+  padding: 25px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cloud-status__card--payment {
+  margin-bottom: 15px;
+}
+
+.cloud-status__card--installation {
+  margin-bottom: 15px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.cloud-status__card--payment .cloud-status__card-content {
+  background-image: url("../img/rub-icon.svg");
+}
+
+.cloud-status__card--installation .cloud-status__card-content {
+  background-image: url("../img/fix-icon.svg");
+}
+
+.cloud-status__card-content {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin-right: 25px;
+  padding-left: 73px;
+  background-size: 48px 48px;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+.cloud-status__card-btn {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.cloud-status__installation-form {
+  width: 100%;
+  margin-top: 25px;
+  padding: 20px;
+  background-color: #f6f6f6;
+  border-radius: 5px;
+}
+
+.cloud-status__installation-form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cloud-status__installation-company {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.cloud-status__installation-file {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin-right: 20px;
+}
+
+.cloud-status__installation-form-send {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }

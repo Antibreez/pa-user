@@ -88,6 +88,11 @@
   line-height: 16px;
 }
 
+@mixin link-reset {
+  text-decoration: none;
+  color: inherit;
+}
+
 // Сброс стилей кнопки
 @mixin btn-reset {
   margin: 0;

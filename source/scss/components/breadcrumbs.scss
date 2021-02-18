@@ -25,3 +25,9 @@
     }
   }
 }
+
+@include tablet {
+  .breadcrumbs {
+    padding-bottom: 25px;
+  }
+}
