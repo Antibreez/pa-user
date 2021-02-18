@@ -1,0 +1,38 @@
+.info-block {
+  &__title {
+    @include h15;
+    margin: 0;
+    color: $text-main;
+  }
+
+  &__subtitle {
+    @include b15;
+    color: $text-minor;
+    margin: 0;
+  }
+
+  &__desc {
+    @include b15;
+    color: $text-main;
+    margin: 0;
+    word-break: break-word;
+  }
+
+  &__item {
+    & p:first-child {
+      margin-bottom: 2px;
+    }
+  }
+
+  &__help {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    vertical-align: middle;
+    background-image: url("../img/help-icon.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: translateY(-2px);
+  }
+}

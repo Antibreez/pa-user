@@ -1,0 +1,124 @@
+//РАЗРЕШЕНИЯ
+// Меньше 1280
+@mixin desktop {
+  @media (max-width: $width-desktop - 1px) {
+    @content;
+  }
+}
+
+// Больше 1280
+@mixin desktop-only {
+  @media (min-width: $width-desktop) {
+    @content;
+  }
+}
+
+// Меньше 768
+@mixin tablet {
+  @media (max-width: $width-tablet - 1px) {
+    @content;
+  }
+}
+
+// Меньше 480
+@mixin mobile {
+  @media (max-width: $width-mobile-max - 1px) {
+    @content;
+  }
+}
+
+// ШРИФТЫ
+@mixin h48 {
+  font-weight: 300;
+  font-size: 48px;
+  line-height: 57px;
+}
+
+@mixin h31 {
+  font-weight: 300;
+  font-size: 31px;
+  line-height: 37px;
+}
+
+@mixin h27 {
+  font-weight: 300;
+  font-size: 27px;
+  line-height: 33px;
+}
+
+@mixin h19 {
+  font-weight: 300;
+  font-size: 19px;
+  line-height: 23px;
+}
+
+@mixin h15 {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+}
+
+@mixin h13 {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15px;
+}
+
+@mixin h11 {
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
+}
+
+@mixin b15 {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 23px;
+}
+
+@mixin b13 {
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 19px;
+}
+
+@mixin b11 {
+  font-weight: 300;
+  font-size: 11px;
+  line-height: 16px;
+}
+
+// Сброс стилей кнопки
+@mixin btn-reset {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  border: none;
+  background-color: transparent;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: transparent;
+  }
+}
+
+//Контейнер
+
+.wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-left: 55px;
+  padding-right: 55px;
+
+  @include desktop {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @include tablet {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+

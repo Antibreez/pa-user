@@ -1,0 +1,170 @@
+.input-block {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  & .input-label {
+    order: 1;
+  }
+
+  & .input-text {
+    order: 2;
+  }
+
+  & .input-note {
+    order: 4;
+  }
+
+  & .input-help {
+    order: 3;
+  }
+}
+
+input.input-text {
+  @include b15;
+
+  height: 48px;
+  padding: 0 15px 0 15px;
+  margin: 0;
+  color: $text-main;
+  border-color: $stroke;
+  border-radius: 5px;
+
+  &::-webkit-input-placeholder {
+    color: #888;
+    opacity: 1;
+  }
+
+  &::-moz-placeholder {
+    color: #888;
+    opacity: 1;
+  }
+
+  &:-moz-placeholder {
+    color: #888;
+    opacity: 1;
+  }
+
+  &:-ms-input-placeholder {
+    color: #888;
+    opacity: 1;
+  }
+
+  &--icon {
+    padding: 0 54px 0 15px;
+  }
+}
+
+
+
+label.input-label {
+  @include b13;
+
+  margin-bottom: 5px;
+  color: $text-minor;
+}
+
+p.input-note {
+  @include b13;
+
+  margin: 0;
+  margin-top: 5px;
+  color: $text-minor;
+}
+
+.input-icon {
+  position: absolute;
+  top: 48px;
+  right: 15px;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  line-height: 0;
+  border: none;
+  border-radius: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: transparent;
+  transform: translateY(-50%);
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: transparent;
+  }
+}
+
+.input-icon--help {
+  height: 24px;
+  width: 24px;
+  background-image: url("../img/help_default.svg");
+}
+
+input.input-text:hover,
+input.input-text:focus {
+  border-color: $primary;
+  background-color: #fff;
+}
+
+input.input-text:invalid,
+input.input-text.js-invalid {
+  border-color: $alert;
+}
+
+input.input-text:invalid + label.input-label + p.input-note,
+input.input-text.js-invalid + label.input-label + p.input-note {
+  color: $alert;
+}
+
+input.input-text:disabled {
+  &::-webkit-input-placeholder {
+    color: $disabled;
+    opacity: 1;
+  }
+
+  &::-moz-placeholder {
+    color: $disabled;
+    opacity: 1;
+  }
+
+  &:-moz-placeholder {
+    color: $disabled;
+    opacity: 1;
+  }
+
+  &:-ms-input-placeholder {
+    color: $disabled;
+    opacity: 1;
+  }
+}
+
+input.input-text:disabled + label.input-label {
+  color: $disabled;
+}
+
+input.input-text:disabled + label.input-label + p.input-note {
+  color: $disabled;
+}
+
+input.input-text:disabled + label.input-label + p.input-note + .input-icon--help {
+  background-image: url("../img/help_hover.svg");
+}
+
+@include tablet {
+  input.input-text {
+    @include b13;
+  }
+
+  label.input-label {
+    @include b11;
+  }
+
+  p.input-note {
+    @include b11;
+  }
+
+  .input-icon {
+    top: 45px;
+  }
+}

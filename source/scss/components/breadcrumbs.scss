@@ -1,0 +1,27 @@
+.breadcrumbs {
+  padding: 50px 0;
+
+  &__link {
+    @include b15;
+    border-bottom: none;
+
+    &:hover {
+      border-bottom: none;
+    }
+
+    &.active {
+      cursor: default;
+      color: $primary;
+    }
+  }
+}
+
+@include desktop {
+  .breadcrumbs {
+    margin: 0;
+
+    &__item {
+      display: inline-block;
+    }
+  }
+}

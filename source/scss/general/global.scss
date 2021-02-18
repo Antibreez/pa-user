@@ -1,0 +1,19 @@
+body {
+  height: auto;
+}
+
+body.js__body-no-scroll {
+  overflow: hidden;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+}
+
+ul li {
+  list-style: none;
+}

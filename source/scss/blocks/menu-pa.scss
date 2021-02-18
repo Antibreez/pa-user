@@ -1,0 +1,72 @@
+.menu-pa {
+  width: 100%;
+  background-color: #f6f6f6;
+
+  &__container {
+    width: 100%;
+  }
+
+  &__list {
+    width: 100%;
+    padding: 20px 0;
+  }
+
+  &__item {
+    width: auto;
+    margin-bottom: 0;
+
+    &:not(:last-child) {
+      margin-right: 35px;
+    }
+  }
+
+  &__item-link {
+    @include b15;
+    border-bottom: none;
+
+    &:hover {
+      color: $primary;
+    }
+
+    &--active {
+      color: $primary;
+    }
+  }
+}
+
+@include desktop {
+  .menu-pa {
+    &__wrapper {
+      padding-right: 0;
+      padding-left: 0;
+    }
+
+    &__item {
+      &:nth-child(n) {
+        margin-right: 35px;
+      }
+
+      &:first-child {
+        margin-left: 30px;
+      }
+    }
+  }
+}
+
+@include tablet {
+  .menu-pa {
+    &__item {
+      &:nth-child(n) {
+        margin-right: 25px;
+      }
+
+      &:first-child {
+        margin-left: 15px;
+      }
+    }
+
+    &__item-link {
+      @include b13;
+    }
+  }
+}

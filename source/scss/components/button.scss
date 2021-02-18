@@ -1,0 +1,170 @@
+.btn-primary,
+.btn-secondary {
+  @include h15;
+
+  display: inline-block;
+  height: auto;
+  padding: 15px 40px;
+  margin: 0;
+  text-decoration: none;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: all .2s ease;
+}
+
+.btn-primary {
+  background-color: $primary;
+  color: #fff;
+
+  &:hover,
+  &:focus {
+    background-color: $primary-hover;
+    color: #fff;
+  }
+
+  &:active {
+    background-color: $primary-pressed;
+    color: #fff;
+  }
+
+  &:disabled {
+    background-color: $disabled;
+    color: #fff;
+  }
+}
+
+.btn-secondary {
+  padding: 14px 39px;
+  border: 1px solid $stroke;
+  color: $text-main;
+  background-color: #fff;
+
+  &:hover,
+  &:focus {
+    border-color: $primary;
+    color: $primary;
+    background-color: #fff;
+  }
+
+  &:active {
+    border-color: $primary-pressed;
+    color: $primary-pressed;
+    background-color: #fff;
+  }
+
+  &:disabled {
+    border-color: $disabled;
+    color: $disabled;
+    background-color: #fff;
+  }
+}
+
+.btn-text,
+.btn-menu {
+  @include h15;
+
+  display: inline;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  color: $primary;
+  text-decoration: none;
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
+  transition: all .2s ease;
+
+  &:hover,
+  &:focus {
+    color: $primary-hover;
+    background-color: transparent;
+  }
+
+  &:active {
+    color: $primary-pressed;
+    background-color: transparent;
+  }
+
+  &:disabled {
+    color: $disabled;
+    background-color: transparent;
+  }
+}
+
+.btn-menu {
+  font-weight: 300;
+  color: $text-main;
+
+  &:hover,
+  &:focus {
+    color: $primary;
+  }
+
+  &:active {
+    color: $primary;
+  }
+}
+
+.btn-icon,
+.btn-icon-h {
+  @include h15;
+
+  display: inline-block;
+  height: auto;
+  padding: 78px 15px 15px 15px;
+  margin: 0;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.05);
+  transition: all .2s ease;
+  background-color: #fff;
+  color: $text-main;
+  background-image: url("../img/show-all.svg");
+  background-position: top 15px center;
+  background-repeat: no-repeat;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $text-main;
+    background-color: #fff;
+    box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.05);
+  }
+
+  &:disabled {
+    color: $disabled;
+    background-color: #fff;
+    background-image: url("../img/show-all-disabled.svg");
+    box-shadow: none;
+  }
+}
+
+.btn-icon-h {
+  padding: 30px 15px 30px 78px;
+  background-position: left 15px center;
+}
+
+@include tablet {
+  .btn-primary,
+  .btn-secondary {
+    @include h13;
+  }
+
+  .btn-icon {
+    @include h11;
+
+    padding: 61px 15px 15px 15px;
+    background-size: 36px auto;
+  }
+
+  .btn-icon-h {
+    @include h11;
+
+    padding: 25px 15px 25px 66px;
+    background-size: 36px auto;
+  }
+}

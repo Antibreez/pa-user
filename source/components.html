@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Daichi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/external.css" rel="stylesheet" async="">
+  <link href="css/internal.css" rel="stylesheet" async="">
+  <link rel="stylesheet" href="css/style.min.css" type="text/css">
+  <script src="js/jquery.min.js"></script>
+</head>
+  <body>
+    <div class="wrapper">
+      <!--Меню-->
+      <h3>Меню</h3>
+    </div>
+    <div class="menu-pa">
+      <div class="menu-pa__wrapper  wrapper">
+        <div class="menu-pa__container  swiper-container">
+          <ul class="menu-pa__list  swiper-wrapper">
+            <li class="menu-pa__item  swiper-slide">
+              <a class="menu-pa__item-link  menu-pa__item-link--active" href="#">Личный кабинет</a>
+            </li>
+            <li class="menu-pa__item  swiper-slide">
+              <a class="menu-pa__item-link" href="#">Мои устройства</a>
+            </li>
+            <li class="menu-pa__item  swiper-slide">
+              <a class="menu-pa__item-link" href="#">Управление подписками</a>
+            </li>
+            <li class="menu-pa__item  swiper-slide">
+              <a class="menu-pa__item-link" href="#">Программы обслуживания</a>
+            </li>
+            <li class="menu-pa__item  swiper-slide">
+              <a class="menu-pa__item-link" href="#">Мои обращения</a>
+            </li>
+            <li class="menu-pa__item  swiper-slide">
+              <a class="menu-pa__item-link" href="#">Профиль</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper">
+      <!--Кнопки-->
+      <h3>Кнопки</h3>
+      <div>
+        <button class="btn-primary">btn-primary</button>
+        <button class="btn-primary" disabled>btn-primary</button>
+        <a class="btn-primary" href="#">btn-primary</a>
+      </div>
+      <div>
+        <button class="btn-secondary">btn-secondary</button>
+        <button class="btn-secondary" disabled>btn-secondary</button>
+        <a class="btn-secondary">btn-secondary</a>
+      </div>
+      <div>
+        <button class="btn-text">btn-text</button>
+        <button class="btn-text" disabled>btn-text</button>
+        <a class="btn-text">btn-text</a>
+      </div>
+      <div>
+        <button class="btn-menu">btn-menu</button>
+        <button class="btn-menu" disabled>btn-menu</button>
+        <a class="btn-menu">btn-menu</a>
+      </div>
+      <div style="padding: 15px;">
+        <button class="btn-icon">btn-icon</button>
+        <button class="btn-icon" disabled>btn-icon</button>
+        <a class="btn-icon">btn-icon</a>
+      </div>
+      <div style="padding: 15px;">
+        <button class="btn-icon-h">btn-icon-h</button>
+        <button class="btn-icon-h" disabled>btn-icon-h</button>
+        <a class="btn-icon-h">btn-icon-h</a>
+      </div>
+      <div>===========================</div>
+      <h3>Input</h3>
+      <div class="input-block" style="margin-bottom: 30px;">
+        <input class="input-text" type="text" placeholder="input-text">
+        <label class="input-label">input-label</label>
+        <p class="input-note">input-note</p>
+      </div>
+      <div class="input-block"  style="margin-bottom: 30px;">
+        <input class="input-text  input-text--icon" type="text" placeholder="input-text  input-text--icon">
+        <label class="input-label">input-label</label>
+        <p class="input-note">input-note</p>
+        <button class="input-icon  input-icon--help"></button>
+      </div>
+      <div class="input-block"  style="margin-bottom: 30px;">
+        <input class="input-text  input-text--icon  js-invalid" type="text" placeholder="input-text  input-text--icon">
+        <label class="input-label">input-label</label>
+        <p class="input-note">input-note</p>
+        <button class="input-icon  input-icon--help"></button>
+      </div>
+      <div class="input-block"  style="margin-bottom: 30px;">
+        <input class="input-text  input-text--icon" type="text" placeholder="input-text  input-text--icon" disabled>
+        <label class="input-label">input-label</label>
+        <p class="input-note">input-note</p>
+        <button class="input-icon  input-icon--help"></button>
+      </div>
+
+      <div>===========================</div>
+      <h3>Select</h3>
+    <div class="input-block" style="width: 50%; margin: 0 auto 50px;">
+      <select name="options" class="select">
+        <option value="" disabled selected hidden>.select</option>
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+        <option value="option4">Option 4</option>
+      </select>
+      <label class="input-label">input-label</label>
+      <p class="input-note">input-note</p>
+    </div>
+    <div class="input-block" style="width: 50%; margin: 0 auto 50px;">
+      <select name="options" class="select js-invalid">
+        <option value="" disabled selected hidden>.select.js-invalid</option>
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+        <option value="option4">Option 4</option>
+        <option value="option4">Option 4</option>
+        <option value="option4">Option 4</option>
+      </select>
+      <label class="input-label">input-label</label>
+      <p class="input-note">input-note</p>
+    </div>
+    <div class="input-block" style="width: 50%; margin: 0 auto;">
+      <select name="options" class="select" disabled>
+        <option value="" disabled selected hidden>.select:disabled</option>
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+        <option value="option4">Option 4</option>
+        <option value="option4">Option 4</option>
+        <option value="option4">Option 4</option>
+      </select>
+      <label class="input-label">input-label</label>
+      <p class="input-note">input-note</p>
+    </div>
+
+    <div>===========================</div>
+      <h3>Search</h3>
+      <div class="search-block">
+        <div class="search-wrap">
+          <input class="search js-show-result" type="text" placeholder="Поиск">
+          <button class="search-close  js-show"></button>
+          <div class="search-result">
+            <div class="search-item">Daichi FTXB-C</div>
+            <div class="search-item">Daichi DA20EVQ1</div>
+            <div class="search-item">Daichi DA70DQ1-B</div>
+            <div class="search-item">Daichi DA70DQ1-B</div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <p><strong>.js-show-result</strong> на <strong>input.search</strong> открывает окно с результатами поиска</p>
+      <p>на мобильном разрешении при фокусе в поле поиска блоку <strong>.search-block</strong> добавляется класс <strong>.js-focus</strong> чтобы поиск показывался на все окно, при окончании поиска класс <strong>.js-focus</strong> должен убираться</p>
+      <p><strong>.js-show</strong> на <strong>.search-close</strong> показывает крестик на поле поиска</p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <!--Модальное окно-->
+    <h3>Модальное окно</h3>
+      <button class="modal-button btn-primary">Открыть модальное окно</button>
+
+      <section class="modal">
+        <div class="modal__overlay">
+
+          <div class="modal__body">
+            <button class="modal__close"></button>
+            <h1 class="modal__title">Заголовок модалки</h1>
+            <p class="modal__desc">
+              Описательный текст, которого может не быть. Такой текст может занимать несколько строчек.
+            </p>
+            <div class="modal__content">
+              содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>
+              содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>
+              содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>
+            </div>
+            <div class="modal__btn-block">
+              <button class="modal__btn-item  btn-primary">Кнопка</button>
+              <button class="modal__btn-item  btn-secondary">Кнопка</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="wrapper">
+      <!--Карточка подписки-->
+      <h3>Карточка подписки</h3>
+      <a href="#" class="subscription-card">
+        <div class="subscription-card__header">
+          <img class="subscription-card__logo  subscription-card__logo--my-comfort-plus" src="img/my-comfort-plus.svg" alt="Мой комфорт Плюс">
+          <div class="subscription-card__status  subscription-card__status--active">
+            Активна
+          </div>
+        </div>
+        <div class="subscription-card__body">
+          <table class="subscription-card__data">
+            <colgroup>
+              <col width="50%">
+              <col width="50%">
+            </colgroup>
+            <tr>
+              <td class="subscription-card__title">Номер договора</td>
+              <td class="subscription-card__contract">DA2020-10</td>
+            </tr>
+            <tr>
+              <td class="subscription-card__title">Кондиционер</td>
+              <td class="subscription-card__units">3 блока</td>
+            </tr>
+            <tr>
+              <td class="subscription-card__title">Действует до</td>
+              <td class="subscription-card__date">25.11.2021</td>
+            </tr>
+          </table>
+        </div>
+        <object class="subscription-card__btn-block">
+
+            <a href="http://www.tune-it.ru/documents/10136/1129663/ava.jpg" class="btn-secondary"> Управлять</a>
+
+        </object>
+      </a>
+      <a href="#" class="subscription-card">
+        <div class="subscription-card__header">
+          <img class="subscription-card__logo  subscription-card__logo--my-comfort" src="img/my-comfort.svg" alt="Мой комфорт">
+          <div class="subscription-card__status  subscription-card__status--waiting-payment">
+            Ожидает<br> оплаты
+          </div>
+        </div>
+        <div class="subscription-card__body">
+          <table class="subscription-card__data">
+            <colgroup>
+              <col width="50%">
+              <col width="50%">
+            </colgroup>
+            <tr>
+              <td class="subscription-card__title">Номер договора</td>
+              <td class="subscription-card__contract">DA2020-10</td>
+            </tr>
+            <tr>
+              <td class="subscription-card__title">Кондиционер</td>
+              <td class="subscription-card__units">3 блока</td>
+            </tr>
+            <tr>
+              <td class="subscription-card__title">Действует до</td>
+              <td class="subscription-card__date">25.11.2021</td>
+            </tr>
+          </table>
+        </div>
+        <object class="subscription-card__btn-block">
+          <a href="#" class="btn-secondary"> Управлять</a>
+          <a href="#" class="btn-primary"> Оплатить</a>
+        </object>
+      </a>
+
+      <a href="#" class="subscription-card">
+        <div class="subscription-card__header">
+          <img class="subscription-card__logo  subscription-card__logo--my-comfort-premium" src="img/my-comfort-premium.svg" alt="Мой комфорт Премиум">
+          <div class="subscription-card__status  subscription-card__status--waiting-activation">
+            Ожидает<br> активации
+          </div>
+        </div>
+        <div class="subscription-card__body">
+          <table class="subscription-card__data">
+            <colgroup>
+              <col width="50%">
+              <col width="50%">
+            </colgroup>
+            <tr>
+              <td class="subscription-card__title">Номер договора</td>
+              <td class="subscription-card__contract">DA2020-10</td>
+            </tr>
+            <tr>
+              <td class="subscription-card__title">Кондиционер</td>
+              <td class="subscription-card__units">3 блока</td>
+            </tr>
+            <tr>
+              <td class="subscription-card__title">Действует до</td>
+              <td class="subscription-card__date">25.11.2021</td>
+            </tr>
+          </table>
+        </div>
+        <object class="subscription-card__btn-block">
+          <a href="#" class="btn-secondary"> Управлять</a>
+        </object>
+      </a>
+
+      <a href="#" class="subscription-card">
+        <div class="subscription-card__header">
+          <img class="subscription-card__logo  subscription-card__logo--my-comfort-plus" src="img/my-comfort-plus.svg" alt="Мой комфорт Плюс">
+          <div class="subscription-card__status  subscription-card__status--expires">
+            Истекает
+          </div>
+        </div>
+        <div class="subscription-card__body">
+          <table class="subscription-card__data">
+            <colgroup>
+              <col width="50%">
+              <col width="50%">
+            </colgroup>
+            <tr>
+              <td class="subscription-card__title">Номер договора</td>
+              <td class="subscription-card__contract">DA2020-10</td>
+            </tr>
+            <tr>
+              <td class="subscription-card__title">Кондиционер</td>
+              <td class="subscription-card__units">3 блока</td>
+            </tr>
+            <tr>
+              <td class="subscription-card__title">Действует до</td>
+              <td class="subscription-card__date">25.11.2021</td>
+            </tr>
+          </table>
+        </div>
+        <object class="subscription-card__btn-block">
+          <a href="#" class="btn-secondary"> Управлять</a>
+          <a href="#" class="btn-primary"> Оплатить</a>
+        </object>
+      </a>
+
+      <a href="#" class="subscription-card">
+        <div class="subscription-card__header">
+          <img class="subscription-card__logo  subscription-card__logo--my-comfort-plus" src="img/my-comfort-plus.svg" alt="Мой комфорт Плюс">
+          <div class="subscription-card__status  subscription-card__status--expired">
+            Просрочена
+          </div>
+        </div>
+        <div class="subscription-card__body">
+          <table class="subscription-card__data">
+            <colgroup>
+              <col width="50%">
+              <col width="50%">
+            </colgroup>
+            <tr>
+              <td class="subscription-card__title">Номер договора</td>
+              <td class="subscription-card__contract">DA2020-10</td>
+            </tr>
+            <tr>
+              <td class="subscription-card__title">Кондиционер</td>
+              <td class="subscription-card__units">3 блока</td>
+            </tr>
+            <tr>
+              <td class="subscription-card__title">Действует до</td>
+              <td class="subscription-card__date">25.11.2021</td>
+            </tr>
+          </table>
+        </div>
+        <object class="subscription-card__btn-block">
+          <a href="#" class="btn-secondary">Переоформить</a>
+        </object>
+      </a>
+    </div>
+
+    <div class="wrapper">
+
+      <!--Карточка устройства-->
+      <h3>Карточка устройства</h3>
+      <a href="#" class="device-card">
+        <div class="device-card__img-wrap">
+          <img src="img/ftxb-c.png" alt="FTXB-C">
+        </div>
+        <div class="device-card__body">
+          <p class="device-card__name">Daikin FTXB-C</p>
+          <p class="device-card__serial-title">Серийный №</p>
+          <p class="device-card__serial">ABCD1234GHYUDlLSC</p>
+        </div>
+      </a>
+      <a href="#" class="device-card">
+        <div class="device-card__img-wrap">
+          <img src="img/ftxb-c.png" alt="FTXB-C">
+        </div>
+        <div class="device-card__body">
+          <p class="device-card__name">Daikin FTXB-C</p>
+          <p class="device-card__serial-title">Серийный №</p>
+          <p class="device-card__serial">ABCD1234GHYUDlLSC</p>
+          <p class="device-card__note" title="Это очень-очень длинное примечание">Это очень-очень длинное примечание</p>
+        </div>
+      </a>
+      <a href="#" class="device-card  device-card--picked">
+        <div class="device-card__img-wrap">
+          <img src="img/ftxb-c.png" alt="FTXB-C">
+        </div>
+        <div class="device-card__body">
+          <p class="device-card__name">Daikin FTXB-C</p>
+          <p class="device-card__serial-title">Серийный №</p>
+          <p class="device-card__serial">ABCD1234GHYUDlLSC</p>
+          <p class="device-card__note" title="Это очень-очень длинное примечание">Это очень-очень длинное примечание</p>
+        </div>
+      </a>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <a href="#" class="device-card">
+        <div class="device-card__img-wrap">
+          <img src="img/ftxb-c.png" alt="FTXB-C">
+        </div>
+        <div class="device-card__body">
+          <p class="device-card__name">Daikin FTXB-C длинное название asdf asdf asdf asdf asdf ASDFA </p>
+          <p class="device-card__serial-title">Серийный №</p>
+          <p class="device-card__serial">ABCD1234GHYUDlLSCSDFGDFGHFGHFGHJFGHJGHJDSDFGSDFG</p>
+          <p class="device-card__note">Это очень-очень длинное примечание</p>
+        </div>
+        <div class="device-card__alert">
+          <div class="device-card__alert-info">
+            Требуется плановое ТО по программе Мой Комфорт Премиум
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="wrapper">
+      <!--Карточка программы-->
+      <h3>Карточка программы</h3>
+      <a href="#" class="program-card  program-card--climat-online">
+        <div class="program-card__body">
+          <div class="program-card__header">
+            <img src="img/climat-online.svg" alt="Климат Онлайн">
+          </div>
+          <p class="program-card__title">Хотите, чтобы кондиционер служил долго?</p>
+          <p class="program-card__text">Подключите кондиционер к&nbsp;службе дистанционного мониторинга.</p>
+          <object class="program-card__btn-block">
+            <a href="#" class="btn-secondary">Подробнее</a>
+            <a href="#" class="btn-primary"> Оформить</a>
+            <a href="#" class="btn-text"> Оформить</a>
+          </object>
+        </div>
+        <div class="program-card__overlay">
+          <p>
+            Хотите, чтобы кондиционер служил долго?
+          </p>
+        </div>
+      </a>
+
+      <a href="#" class="program-card  program-card--my-comfort">
+        <div class="program-card__body">
+          <div class="program-card__header">
+            <img src="img/my-comfort.svg" alt="Мой комфорт">
+          </div>
+          <p class="program-card__title">Хотите, чтобы кондиционер служил вечно?</p>
+          <p class="program-card__text">Подпишитесь на&nbsp;бесперебойную работу вне&nbsp;зависимости от&nbsp;срока эксплуатации.</p>
+          <object class="program-card__btn-block">
+            <a href="#" class="btn-secondary">Подробнее</a>
+            <a href="#" class="btn-primary"> Оформить</a>
+            <a href="#" class="btn-text"> Оформить</a>
+          </object>
+        </div>
+        <div class="program-card__overlay">
+          <p>
+            Хотите, чтобы кондиционер служил вечно?
+          </p>
+        </div>
+      </a>
+
+      <a href="#" class="program-card  program-card--mobile-control">
+        <div class="program-card__body">
+          <div class="program-card__header">
+            <img src="img/mobile-control.svg" alt="Мобильное управление">
+          </div>
+          <p class="program-card__title">Хотите, чтобы кондиционер стал умным помощником?</p>
+          <p class="program-card__text">Приложение доступно в&nbsp;App&nbsp;Store и&nbsp;Google&nbsp;Play.</p>
+          <object class="program-card__btn-block">
+            <a href="#" class="btn-secondary">Подробнее</a>
+            <a href="#" class="btn-primary"> Оформить</a>
+            <a href="#" class="btn-text"> Оформить</a>
+          </object>
+        </div>
+        <div class="program-card__overlay">
+          <p>
+            Хотите, чтобы кондиционер стал умным помощником?
+          </p>
+        </div>
+      </a>
+
+      <a href="#" class="program-card-mini  program-card-mini--climat-online">
+        <div class="program-card-mini__body">
+          <div class="program-card-mini__header">
+            <img src="img/climat-online.svg" alt="Климат Онлайн">
+          </div>
+          <p class="program-card-mini__title">Хотите, чтобы кондиционер служил долго?</p>
+          <p class="program-card-mini__text">Подключите кондиционер к&nbsp;службе дистанционного мониторинга.</p>
+          <object class="program-card-mini__btn-block">
+            <a href="#" class="btn-text"> Оформить</a>
+          </object>
+        </div>
+        <div class="program-card-mini__overlay">
+        </div>
+      </a>
+
+      <a href="#" class="program-card-mini  program-card-mini--my-comfort">
+        <div class="program-card-mini__body">
+          <div class="program-card-mini__header">
+            <img src="img/my-comfort.svg" alt="Мой комфорт">
+          </div>
+          <p class="program-card-mini__title">Хотите, чтобы кондиционер служил вечно?</p>
+          <p class="program-card-mini__text">Подпишитесь на&nbsp;бесперебойную работу вне&nbsp;зависимости от&nbsp;срока эксплуатации.</p>
+          <object class="program-card-mini__btn-block">
+            <a href="#" class="btn-text">Оформить</a>
+          </object>
+        </div>
+        <div class="program-card-mini__overlay">
+        </div>
+      </a>
+
+      <a href="#" class="program-card-mini  program-card-mini--mobile-control">
+        <div class="program-card-mini__body">
+          <div class="program-card-mini__header">
+            <img src="img/mobile-control.svg" alt="Мобильное управление">
+          </div>
+          <p class="program-card-mini__title">Хотите, чтобы кондиционер стал умным помощником?</p>
+          <p class="program-card-mini__text">Приложение доступно в App&nbsp;Store и
+            Google&nbsp;Play.</p>
+            <object class="program-card-mini__btn-block">
+              <a href="#" class="btn-text">Оформить</a>
+            </object>
+        </div>
+        <div class="program-card-mini__overlay">
+        </div>
+      </a>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+  <script src="js/vendor.min.js"></script>
+  <script src="js/external.js"></script>
+  <script src="js/internal.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    const $modal = document.querySelector('.modal');
+    const $button = document.querySelector('.modal-button');
+
+
+    const modal = new Modal($button, $modal);
+  </script>
+  </body>
+</html>

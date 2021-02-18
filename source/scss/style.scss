@@ -1,0 +1,30 @@
+// vendor
+@import "vendor/swiper-bundle.scss";
+
+// general
+@import "general/variables.scss";
+@import "general/mixins.scss";
+@import "general/global.scss";
+
+// components
+@import "components/button.scss";
+@import "components/inputs.scss";
+@import "components/selects.scss";
+@import "components/search.scss";
+@import "components/modal.scss";
+@import "components/breadcrumbs.scss";
+@import "components/info-block.scss";
+
+// blocks
+@import "blocks/menu-pa.scss";
+@import "blocks/cloud-device.scss";
+@import "blocks/cloud-card.scss";
+//@import "blocks/subscription-card.scss";
+//@import "blocks/device-card.scss";
+//@import "blocks/program-card.scss";
+//@import "blocks/account.scss";
+//@import "blocks/subscriptions.scss";
+//@import "blocks/banner.scss";
+//@import "blocks/requests-account.scss";
+//@import "blocks/request-table.scss";
+//@import "blocks/devices.scss";
