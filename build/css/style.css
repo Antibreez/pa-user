@@ -1805,6 +1805,14 @@ div.input-file__file-load {
   display: none;
 }
 
+@media (max-width: 767px) {
+  .input-file__label {
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 19px;
+  }
+}
+
 .file-load {
   text-decoration: none;
   color: inherit;
@@ -1961,12 +1969,26 @@ div.input-file__file-load {
   }
 }
 
+.cloud-device {
+  margin-bottom: 75px;
+}
+
 .cloud-device__card {
   margin-bottom: 25px;
 }
 
 .cloud-device__card-note {
   margin-top: 25px;
+}
+
+.cloud-device__status {
+  margin-bottom: 75px;
+}
+
+@media (max-width: 767px) {
+  .cloud-device__status {
+    margin-bottom: 50px;
+  }
 }
 
 .cloud-card {
@@ -2319,6 +2341,10 @@ div.input-file__file-load {
   background-image: url("../img/fix-icon.svg");
 }
 
+.cloud-status__card--connection .cloud-status__card-content {
+  background-image: url("../img/cloud-plus-icon.svg");
+}
+
 .cloud-status__card-content {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
@@ -2328,6 +2354,10 @@ div.input-file__file-load {
   background-size: 48px 48px;
   background-repeat: no-repeat;
   background-position: left center;
+}
+
+.cloud-status__card-title {
+  margin-bottom: 5px;
 }
 
 .cloud-status__card-btn {
@@ -2369,4 +2399,196 @@ div.input-file__file-load {
 .cloud-status__installation-form-send {
   -ms-flex-negative: 0;
       flex-shrink: 0;
+}
+
+@media (max-width: 767px) {
+  .cloud-status__list {
+    padding: 15px 0;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .cloud-status__item {
+    width: 32%;
+    max-width: 220px;
+    padding-top: 51px;
+    background-size: 36px 36px;
+  }
+  .cloud-status__item:nth-child(n) {
+    margin: 0;
+  }
+  .cloud-status__item-payment-type {
+    font-weight: 300;
+    font-size: 11px;
+    line-height: 16px;
+  }
+  .cloud-status__item-name {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+  }
+  .cloud-status__card {
+    padding: 15px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .cloud-status__card-content {
+    padding-left: 0;
+    background-size: 36px 36px;
+    background-position: top left;
+  }
+  .cloud-status__card-title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    min-height: 30px;
+    padding-left: 51px;
+    margin-bottom: 13px;
+  }
+  .cloud-status__card-btn {
+    margin-top: 15px;
+    width: 100%;
+  }
+  .cloud-status__installation-form {
+    padding: 15px;
+  }
+  .cloud-status__installation-form form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+  .cloud-status__installation-company {
+    margin-bottom: 15px;
+  }
+  .cloud-status__installation-file {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+}
+
+.documents__title {
+  font-weight: 300;
+  font-size: 31px;
+  line-height: 37px;
+  margin: 0 0 25px;
+  color: #444;
+}
+
+.documents__list {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.documents__item {
+  width: calc((100% - 60px) / 2);
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 15px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.documents__item-logo {
+  width: 48px;
+  height: 48px;
+  margin-right: 25px;
+  background-image: url("../img/pdf-file.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.documents__item-name {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 23px;
+  color: #444;
+  margin: 0 0 2px;
+}
+
+.documents__item-char {
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 19px;
+  color: #888;
+  margin: 0;
+}
+
+.documents__item-info {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.documents__item-download, .documents__item-preview {
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin-left: 15px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  border: none;
+}
+
+.documents__item-download {
+  background-image: url("../img/download.svg");
+}
+
+.documents__item-preview {
+  background-image: url("../img/view.svg");
+}
+
+@media (max-width: 767px) {
+  .documents__title {
+    font-weight: 300;
+    font-size: 19px;
+    line-height: 23px;
+    margin: 0 0 15px;
+  }
+  .documents__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .documents__item {
+    width: 100%;
+  }
+  .documents__item-logo {
+    width: 36px;
+    height: 36px;
+  }
+  .documents__item-name {
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 19px;
+  }
+  .documents__item-char {
+    font-weight: 300;
+    font-size: 11px;
+    line-height: 16px;
+  }
 }

@@ -41,3 +41,11 @@ div.input-file__file-load {
 .custom-file {
   display: none;
 }
+
+@include tablet {
+  .input-file {
+    &__label {
+      @include b13;
+    }
+  }
+}

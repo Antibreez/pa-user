@@ -1,9 +1,23 @@
 .cloud-device {
+  margin-bottom: 75px;
+
   &__card {
     margin-bottom: 25px;
   }
 
   &__card-note {
     margin-top: 25px;
+  }
+
+  &__status {
+    margin-bottom: 75px;
+  }
+}
+
+@include tablet {
+  .cloud-device {
+    &__status {
+      margin-bottom: 50px;
+    }
   }
 }

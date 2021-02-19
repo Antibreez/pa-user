@@ -1,0 +1,96 @@
+.documents {
+  &__title {
+    @include h31;
+    margin: 0 0 25px;
+    color: $text-main;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    width: calc((100% - 60px) / 2);
+    flex-shrink: 0;
+    display: flex;
+    margin-bottom: 15px;
+    align-items: center;
+  }
+
+  &__item-logo {
+    width: 48px;
+    height: 48px;
+    margin-right: 25px;
+    background-image: url("../img/pdf-file.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+  }
+
+  &__item-name {
+    @include b15;
+    color: $text-main;
+    margin: 0 0 2px;
+  }
+
+  &__item-char {
+    @include b13;
+    color: $text-minor;
+    margin: 0;
+  }
+
+  &__item-info {
+    flex-grow: 1;
+  }
+
+  &__item-download,
+  &__item-preview {
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin-left: 15px;
+    flex-shrink: 0;
+    border: none;
+  }
+
+  &__item-download {
+    background-image: url("../img/download.svg");
+  }
+
+  &__item-preview {
+    background-image: url("../img/view.svg");
+  }
+}
+
+@include tablet {
+  .documents {
+    &__title {
+      @include h19;
+      margin: 0 0 15px;
+    }
+
+    &__list {
+      flex-direction: column;
+    }
+
+    &__item {
+      width: 100%;
+    }
+
+    &__item-logo {
+      width: 36px;
+      height: 36px;
+    }
+
+    &__item-name {
+      @include b13;
+    }
+
+    &__item-char {
+      @include b11;
+    }
+  }
+}

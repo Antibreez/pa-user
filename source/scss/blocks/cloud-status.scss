@@ -65,6 +65,10 @@
     &--installation .cloud-status__card-content {
       background-image: url("../img/fix-icon.svg");
     }
+
+    &--connection .cloud-status__card-content {
+      background-image: url("../img/cloud-plus-icon.svg");
+    }
   }
 
   &__card-content {
@@ -74,6 +78,10 @@
     background-size: 48px 48px;
     background-repeat: no-repeat;
     background-position: left center;
+  }
+
+  &__card-title {
+    margin-bottom: 5px;
   }
 
   &__card-btn {
@@ -106,5 +114,76 @@
 
   &__installation-form-send {
     flex-shrink: 0;
+  }
+}
+
+@include tablet {
+  .cloud-status {
+    &__list {
+      padding: 15px 0;
+      justify-content: space-between;
+    }
+
+    &__item {
+      width: 32%;
+      max-width: 220px;
+      padding-top: 51px;
+      background-size: 36px 36px;
+
+      &:nth-child(n) {
+        margin: 0;
+      }
+    }
+
+    &__item-payment-type {
+      @include b11;
+    }
+
+    &__item-name {
+      @include h13;
+    }
+
+    &__card {
+      padding: 15px;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &__card-content {
+      padding-left: 0;
+      background-size: 36px 36px;
+      background-position: top left;
+    }
+
+    &__card-title {
+      display: flex;
+      align-items: center;
+      min-height: 30px;
+      padding-left: 51px;
+      margin-bottom: 13px;
+    }
+
+    &__card-btn {
+      margin-top: 15px;
+      width: 100%;
+    }
+
+    &__installation-form {
+      padding: 15px;
+    }
+
+    &__installation-form form {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    &__installation-company {
+      margin-bottom: 15px;
+    }
+
+    &__installation-file {
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
   }
 }
