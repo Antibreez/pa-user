@@ -16,6 +16,8 @@
 @import "components/info-block.scss";
 @import "components/input-file.scss";
 @import "components/file-load.scss";
+@import "components/checkbox.scss";
+@import "components/radio.scss";
 
 // blocks
 @import "blocks/menu-pa.scss";
@@ -23,6 +25,9 @@
 @import "blocks/cloud-card.scss";
 @import "blocks/cloud-status.scss";
 @import "blocks/documents.scss";
+@import "blocks/first-payment.scss";
+@import "blocks/payment-card.scss";
+@import "blocks/contract-modal.scss";
 //@import "blocks/subscription-card.scss";
 //@import "blocks/device-card.scss";
 //@import "blocks/program-card.scss";

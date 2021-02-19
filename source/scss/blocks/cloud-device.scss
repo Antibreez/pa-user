@@ -12,12 +12,20 @@
   &__status {
     margin-bottom: 75px;
   }
+
+  &__documents {
+    padding-bottom: 75px;
+  }
 }
 
 @include tablet {
   .cloud-device {
     &__status {
       margin-bottom: 50px;
+    }
+
+    &__documents {
+      padding-bottom: 50px;
     }
   }
 }

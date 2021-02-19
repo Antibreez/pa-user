@@ -104,6 +104,12 @@
   }
 }
 
+.contract-modal-trigger {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
 @include desktop {
   .cloud-card {
     &__img-block {

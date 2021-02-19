@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Daichi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/external.css" rel="stylesheet" async="">
+  <link href="css/internal.css" rel="stylesheet" async="">
+  <link rel="stylesheet" href="css/style.min.css" type="text/css">
+  <script src="js/jquery.min.js"></script>
+</head>
+  <body>
+    <section class="menu-pa">
+      <div class="menu-pa__wrapper  wrapper">
+        <nav class="menu-pa__container  swiper-container">
+          <ul class="menu-pa__list  swiper-wrapper">
+            <li class="menu-pa__item  swiper-slide">
+              <a class="menu-pa__item-link  menu-pa__item-link--active" href="#">Личный кабинет</a>
+            </li>
+            <li class="menu-pa__item  swiper-slide">
+              <a class="menu-pa__item-link" href="#">Мои устройства</a>
+            </li>
+            <li class="menu-pa__item  swiper-slide">
+              <a class="menu-pa__item-link" href="#">Управление подписками</a>
+            </li>
+            <li class="menu-pa__item  swiper-slide">
+              <a class="menu-pa__item-link" href="#">Программы обслуживания</a>
+            </li>
+            <li class="menu-pa__item  swiper-slide">
+              <a class="menu-pa__item-link" href="#">Мои обращения</a>
+            </li>
+            <li class="menu-pa__item  swiper-slide">
+              <a class="menu-pa__item-link" href="#">Профиль</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+
+    <main class="cloud-device">
+      <div class="breadcrumbs">
+        <div class="breadcrumbs__container wrapper">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a href="#" class="breadcrumbs__link">Назад</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <section class="first-payment">
+        <div class="first-payment__container  wrapper">
+          <div class="first-payment__invoice">
+            <form>
+              <h2 class="first-payment__invoice-title">Счёт &#8470;2020_418</h2>
+              <p class="first-payment__invoice-subtitle">на сумму 10 998 руб.</p>
+              <p class="first-payment__invoice-desc">
+                Введите свои ФИО, номер телефона и&nbsp;E&#8209;mail для продолжения оплаты.
+              </p>
+              <div class="first-payment__name  input-block">
+                <input class="input-text" type="text" placeholder="">
+                <label class="input-label">Укажите фамилию, имя и&nbsp;отчество через пробел</label>
+              </div>
+              <div class="first-payment__phone  input-block">
+                <input class="input-text  input-phone" type="text" placeholder="">
+                <label class="input-label">Номер телефона</label>
+              </div>
+              <div class="first-payment__email  input-block">
+                <input class="input-text" type="email" placeholder="">
+                <label class="input-label">Email</label>
+              </div>
+
+              <div class="first-payment__check  checkbox">
+                <label class="checkbox__label">
+                  <input class="checkbox__input visually-hidden"  type="checkbox" name="agreement-personal-data">
+                  <div></div>
+                  <p class="checkbox__text">Я согласен с обработкой персональных данных</p>
+                </label>
+              </div>
+
+              <div class="first-payment__check  checkbox">
+                <label class="checkbox__label">
+                  <input class="checkbox__input visually-hidden"  type="checkbox" name="offer-agreement">
+                  <div></div>
+                  <p class="checkbox__text">Я согласен с договором оферты</p>
+                </label>
+              </div>
+
+              <div class="first-payment__check  radio">
+                <label class="radio__label">
+                  <input class="radio__input visually-hidden"  type="radio" name="payment-type" value="card">
+                  <div></div>
+                  <p class="radio__text">Оплатить по карте</p>
+                </label>
+              </div>
+
+              <div class="first-payment__check  radio">
+                <label class="radio__label">
+                  <input class="radio__input visually-hidden"  type="radio" name="payment-type" value="other">
+                  <div></div>
+                  <p class="radio__text">Другие способы оплаты</p>
+                </label>
+              </div>
+
+              <button class="first-payment__submit  btn-primary">Оплатить</button>
+
+              <ul class="first-payment__payment-icons-list">
+                <li class="first-payment__icon">
+                  <img src="img/apple-pay.svg" alt="Apple Pay">
+                </li>
+                <li class="first-payment__icon">
+                  <img src="img/maestro.svg" alt="Maestro">
+                </li>
+                <li class="first-payment__icon">
+                  <img src="img/mastercard.svg" alt="Mastercard">
+                </li>
+                <li class="first-payment__icon">
+                  <img src="img/visa.svg" alt="Visa">
+                </li>
+                <li class="first-payment__icon">
+                  <img src="img/webmoney.svg" alt="WebMoney">
+                </li>
+                <li class="first-payment__icon">
+                  <img src="img/mir.svg" alt="Мир">
+                </li>
+                <li class="first-payment__icon">
+                  <img src="img/yandex-money.svg" alt="Яндекс Деньги">
+                </li>
+              </ul>
+            </form>
+          </div>
+
+          <div class="first-payment__details">
+            <div class="first-payment__order">
+              <h3 class="first-payment__order-title">Состав заказа</h3>
+              <div class="first-payment__order-row">
+                <p class="first-payment__order-row-name">Товары</p>
+                <div class="first-payment__order-dots"></div>
+                <p class="first-payment__order-row-price">10 998 руб.</p>
+              </div>
+              <div class="first-payment__order-row">
+                <p class="first-payment__order-row-name">Доставка</p>
+                <div class="first-payment__order-dots"></div>
+                <p class="first-payment__order-row-price">0 руб.</p>
+              </div>
+              <div class="first-payment__order-total">
+                <span class="first-payment__order-total-name">К оплате</span>
+                <span class="first-payment__order-total-price">10 998 руб.</span>
+              </div>
+            </div>
+
+            <div class="first-payment__devices">
+              <button class="first-payment__devices-btn">
+                <span class="first-payment__devices-title">Показать товары</span>
+                <span class="first-payment__device-toggle-icon"></span>
+              </button>
+
+              <section class="first-payment__payment-card  payment-card">
+                <div class="payment-card__title">
+                  <div class="payment-card__name">
+                    <p class="payment-card__type">Облачный кондиционер </p>
+                    <p class="payment-card__model">Daichi A25AVQ1/A25FV1</p>
+                  </div>
+                  <div class="payment-card__amount">
+                    <p class="payment-card__amount-title">Кол-во</p>
+                    <p class="payment-card__amount-value">1 шт.</p>
+                  </div>
+                </div>
+                <div class="payment-card__body">
+                  <div class="payment-card__img-block">
+                    <img src="img/device.png" alt="Device">
+                  </div>
+                  <div class="payment-card__chars">
+                    <div class="payment-card__chars-column">
+                      <div class="payment-card__chars-item">
+                        <p class="payment-card__chars-item-title">Срок</p>
+                        <p class="payment-card__chars-item-desc">7 лет</p>
+                      </div>
+                      <div class="payment-card__chars-item">
+                        <p class="payment-card__chars-item-title">Первый взнос</p>
+                        <p class="payment-card__chars-item-desc">7 999 руб.</p>
+                      </div>
+                    </div>
+                    <div class="payment-card__chars-column">
+                      <div class="payment-card__chars-item">
+                        <p class="payment-card__chars-item-title">Полная стоимость</p>
+                        <p class="payment-card__chars-item-desc">28 992 руб.</p>
+                      </div>
+                      <div class="payment-card__chars-item">
+                        <p class="payment-card__chars-item-title">Ежегодный платёж</p>
+                        <p class="payment-card__chars-item-desc">2 999 руб.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p class="payment-card__additional-service">
+                  + Расширенная гарантия (500 руб. / в год)
+                </p>
+                <div class="payment-card__total-block">
+                  <p class="payment-card__total-title">К оплате сейчас:</p>
+                  <p class="payment-card__total-value"> 10 998 руб.</p>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/vendor.min.js"></script>
+    <script src="js/external.js"></script>
+    <script src="js/internal.js"></script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

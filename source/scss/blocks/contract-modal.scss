@@ -1,0 +1,247 @@
+.contract-modal {
+  &__status {
+    @include b15;
+    color: $text-main;
+    padding: 15px 15px 15px 54px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    background-size: 24px 24px;
+    background-position: left 15px center;
+    background-repeat: no-repeat;
+
+    &.pending {
+      background-color: rgba(255, 0, 0, 0.03);
+      background-image: url("../img/alert.svg");
+    }
+
+    &.done {
+      background-color: #E8F8FE;
+      background-image: url("../img/check.svg");
+    }
+  }
+
+  &__toggle-btn {
+    @include btn-reset;
+    @include h19;
+    font-weight: 300;
+    color: $text-main;
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+
+    &:hover,
+    &:focus {
+      color: $text-main;
+    }
+
+    & .info-block__toggle-icon {
+      margin-left: 10px;
+    }
+  }
+
+  &__devices {
+    margin-bottom: 25px;
+  }
+
+  &__devices-wrapper {
+    display: none;
+  }
+
+  &__devices-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__devices-card {
+    padding: 15px;
+    border: 1px solid $stroke;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    width: calc((100% - 15px) / 2);
+    margin-bottom: 15px;
+  }
+
+  &__devices-img-block {
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    flex-shrink: 0;
+  }
+
+  &__devices-name {
+    @include h15;
+    @include overflow-2lines;
+    color: $text-main;
+    overflow: hidden;
+
+  }
+
+  &__address-block {
+    margin-bottom: 25px;
+  }
+
+  &__address-wrapper {
+    display: none;
+  }
+
+  &__address-card {
+    position: relative;
+    padding: 15px;
+    border: 1px solid $stroke;
+    border-radius: 5px;
+  }
+
+  &__address {
+    @include h15;
+    color: $text-main;
+    margin-bottom: 5px;
+    padding-right: 40px;
+  }
+
+  &__address-city {
+    @include b13;
+    color: $text-minor;
+    margin-bottom: 15px;
+    padding-right: 40px;
+  }
+
+  &__address-details {
+    padding-top: 15px;
+    border-top: 1px solid $stroke;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__address-details-item {
+    width: calc((100% - 45px) / 4);
+  }
+
+  &__address-details-name {
+    @include b13;
+    color: $text-main;
+    margin-bottom: 5px;
+  }
+
+  &__address-details-desc {
+    @include b15;
+    color: $text-main;
+  }
+
+  &__address-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    background-image: url("../img/close_default.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: transparent;
+      border: none;
+    }
+
+    &:hover {
+      background-image: url("../img/close_hover.svg");
+    }
+  }
+
+  &__documents-block {
+    margin-bottom: 25px;
+  }
+
+  &__documents-wrapper {
+    display: none;
+  }
+
+  &__documents-block {
+    & .documents__item {
+      width: 100%;
+    }
+  }
+
+  &__to-payment {
+    padding: 30px;
+    background-color: #f6f6f6;
+    border-radius: 5px;
+  }
+
+  &__to-payment-text {
+    @include h19;
+    font-weight: 300;
+    color: $text-main;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+
+  &__to-payment-link {
+    width: 100%;
+  }
+}
+
+@include tablet {
+  .contract-modal {
+    & .modal__body {
+      padding-bottom: 60px;
+    }
+
+    &__status {
+      @include b11;
+    }
+
+    &__toggle-btn {
+      @include h15;
+    }
+
+    &__devices-list {
+      flex-direction: column;
+    }
+
+    &__devices-card {
+      width: 100%;
+      margin: 0 0 5px;
+    }
+
+    &__devices-name {
+      @include h13;
+    }
+
+    &__address {
+      @include h13;
+    }
+
+    &__address-city {
+      @include h11;
+    }
+
+    &__address-details-name {
+      @include b11;
+    }
+
+    &__address-details-desc {
+      @include b13;
+    }
+
+    &__to-payment {
+      padding: 15px;
+    }
+
+    &__to-payment-text {
+      @include b15;
+      margin-bottom: 15px;
+    }
+  }
+}

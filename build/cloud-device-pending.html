@@ -115,7 +115,7 @@
                   <p class="info-block__subtitle">Номер договора</p>
                   <p class="cloud-card__contract-number  info-block__desc">
                     DA2020-11
-                    <span class="info-block__help"></span>
+                    <span class="info-block__help  contract-modal-trigger"></span>
                   </p>
                 </div>
               </div>
@@ -252,6 +252,134 @@
           </ul>
         </div>
       </div>
+
+
+      <!--Модальное окно договора-->
+      <section class="contract-modal  modal">
+        <div class="modal__overlay">
+
+          <div class="modal__body">
+            <button class="modal__close"></button>
+            <h1 class="modal__title">Договор DA2020-10</h1>
+            <div class="contract-modal__status  pending">
+              Ожидает оплаты
+            </div>
+            <div class="contract-modal__status  done">
+              Оплачен
+            </div>
+
+            <div class="contract-modal__devices">
+              <button class="contract-modal__toggle-btn">
+                Устройства (1)
+                <span class="info-block__toggle-icon"></span>
+              </button>
+              <div class="contract-modal__devices-wrapper">
+                <div class="contract-modal__devices-list">
+                  <div class="contract-modal__devices-card">
+                    <div class="contract-modal__devices-img-block">
+                      <img src="img/device.png" alt="Device">
+                    </div>
+                    <p class="contract-modal__devices-name">
+                      Daichi A25AVQ1/A25FV1
+                    </p>
+                  </div>
+                  <div class="contract-modal__devices-card">
+                    <div class="contract-modal__devices-img-block">
+                      <img src="img/device.png" alt="Device">
+                    </div>
+                    <p class="contract-modal__devices-name">
+                      Daichi A25AVQ1/A25FV1
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="contract-modal__address-block">
+              <button class="contract-modal__toggle-btn">
+                Адрес
+                <span class="info-block__toggle-icon"></span>
+              </button>
+              <div class="contract-modal__address-wrapper">
+                <div class="contract-modal__address-card">
+                  <button class="contract-modal__address-close"></button>
+                  <p class="contract-modal__address">
+                    Лермонтовский проспект, 8к1
+                  </p>
+                  <p class="contract-modal__address-city">
+                    Москва
+                  </p>
+                  <div class="contract-modal__address-details">
+                    <div class="contract-modal__address-details-item">
+                      <p class="contract-modal__address-details-name">
+                        Подъезд
+                      </p>
+                      <p class="contract-modal__address-details-desc">
+                        1
+                      </p>
+                    </div>
+                    <div class="contract-modal__address-details-item">
+                      <p class="contract-modal__address-details-name">
+                        Кв / Офис
+                      </p>
+                      <p class="contract-modal__address-details-desc">
+                        172
+                      </p>
+                    </div>
+                    <div class="contract-modal__address-details-item">
+                      <p class="contract-modal__address-details-name">
+                        Домофон
+                      </p>
+                      <p class="contract-modal__address-details-desc">
+                        172#8766
+                      </p>
+                    </div>
+                    <div class="contract-modal__address-details-item">
+                      <p class="contract-modal__address-details-name">
+                        Этаж
+                      </p>
+                      <p class="contract-modal__address-details-desc">
+                        10
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="contract-modal__documents-block">
+              <button class="contract-modal__toggle-btn">
+                Документы
+                <span class="info-block__toggle-icon"></span>
+              </button>
+              <div class="contract-modal__documents-wrapper">
+                <ul class="documents__list">
+                  <li class="documents__item">
+                    <div class="documents__item-logo"></div>
+                    <div class="documents__item-info">
+                      <p class="documents__item-name">Условия покупки облачного кондиционера</p>
+                      <p class="documents__item-char">10МБ, PDF</p>
+                    </div>
+                    <a href="#" class="documents__item-download" download=""></a>
+                    <a href="#" class="documents__item-preview"></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="contract-modal__to-payment">
+              <div class="contract-modal__to-payment-text">
+                <span>К оплате</span>
+                <span>10 998 руб.</span>
+              </div>
+              <a href="#" class="contract-modal__to-payment-link  btn-primary">
+                Перейти к оплате договора
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </section>
     </main>
 
     <script src="js/vendor.min.js"></script>

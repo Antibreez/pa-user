@@ -104,6 +104,13 @@
 (function () {
   var vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty('--vh', "".concat(vh, "px"));
+
+  var onResize = function onResize() {
+    var vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', "".concat(vh, "px"));
+  };
+
+  window.addEventListener('resize', debounce(onResize));
   var $body = document.querySelector('body');
 
   function debounce(func) {
@@ -122,7 +129,6 @@
     this.onOverlayClick = this.onOverlayClick.bind(this);
     this.onCloseClick = this.onCloseClick.bind(this);
     this.onTriggerClick = this.onTriggerClick.bind(this);
-    this.onResize = this.onResize.bind(this);
     this.addEventListeners();
   }
 
@@ -150,19 +156,26 @@
     this.open();
   };
 
-  Modal.prototype.onResize = function () {
-    var vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty('--vh', "".concat(vh, "px"));
-  };
-
   Modal.prototype.addEventListeners = function () {
     this.overlay.addEventListener('click', this.onOverlayClick);
     this.closeBtn.addEventListener('click', this.onCloseClick);
     this.trigger.addEventListener('click', this.onTriggerClick);
-    window.addEventListener('resize', debounce(this.onResize));
   };
 
   window.Modal = Modal;
+})();
+
+(function () {
+  var inputs = document.querySelectorAll('.input-phone');
+
+  if (!inputs[0]) {
+    return;
+  }
+
+  var im = new Inputmask("+7(999) 999-99-99");
+  inputs.forEach(function (item) {
+    im.mask(item);
+  });
 })();
 
 (function () {
@@ -251,6 +264,22 @@
 })();
 
 (function () {
+  var contractBtn = document.querySelector('.contract-modal-trigger');
+  var modalContract = document.querySelector('.contract-modal');
+  console.log(contractBtn + '   ' + modalContract);
+
+  if (!contractBtn || !modalContract) {
+    return;
+  }
+
+  var modal = new Modal(contractBtn, modalContract);
+  $('.contract-modal__toggle-btn').on('click', function () {
+    $(this).next().slideToggle();
+    $(this).children('.info-block__toggle-icon').toggleClass('opened');
+  });
+})();
+
+(function () {
   $(window).load(function () {
     var swiper = new Swiper('.menu-pa__container', {
       freeMode: true,
@@ -263,5 +292,12 @@
         }
       }
     });
+  });
+})();
+
+(function () {
+  $('.first-payment__devices-btn').on('click', function () {
+    $(this).next().slideToggle();
+    $(this).children('.first-payment__device-toggle-icon').toggleClass('opened');
   });
 })();
