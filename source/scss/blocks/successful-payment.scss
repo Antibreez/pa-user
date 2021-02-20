@@ -1,0 +1,49 @@
+.successful-payment {
+  &__container {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__logo {
+    width: 253px;
+    height: 253px;
+    margin-bottom: 30px;
+    background-image: url("../img/successful-registration.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &__title {
+    @include h31;
+    color: $text-main;
+    margin: 0 0 15px;
+    text-align: center;
+  }
+
+  &__desc {
+    @include h15;
+    color: $text-minor;
+    margin: 0 0 50px;
+    text-align: center;
+  }
+}
+
+@include tablet {
+  .successful-payment {
+    &__container {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+
+    &__title {
+      @include h27;
+    }
+
+    &__desc {
+      @include b13;
+    }
+  }
+}

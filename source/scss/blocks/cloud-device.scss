@@ -16,6 +16,10 @@
   &__documents {
     padding-bottom: 75px;
   }
+
+  &__payment-schedule {
+    margin-bottom: 75px;
+  }
 }
 
 @include tablet {
@@ -26,6 +30,10 @@
 
     &__documents {
       padding-bottom: 50px;
+    }
+
+    &__payment-schedule {
+      margin-bottom: 50px;
     }
   }
 }

@@ -738,6 +738,7 @@ button.swiper-pagination-bullet {
 
 body {
   height: auto;
+  min-width: 320px;
 }
 
 body.js__body-no-scroll {
@@ -1708,6 +1709,14 @@ input.search.js-show-result + .search-close + .search-result {
   color: #444;
 }
 
+.info-block__main-title {
+  font-weight: 300;
+  font-size: 31px;
+  line-height: 37px;
+  color: #444;
+  margin: 0 0 25px;
+}
+
 .info-block__subtitle {
   font-weight: 300;
   font-size: 15px;
@@ -1730,6 +1739,11 @@ input.search.js-show-result + .search-close + .search-result {
 }
 
 .info-block__help {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  border: none;
+  background-color: transparent;
   display: inline-block;
   width: 20px;
   height: 20px;
@@ -1740,6 +1754,10 @@ input.search.js-show-result + .search-close + .search-result {
   background-size: cover;
   -webkit-transform: translateY(-2px);
           transform: translateY(-2px);
+}
+
+.info-block__help:hover, .info-block__help:active, .info-block__help:focus {
+  background-color: transparent;
 }
 
 .info-block__help:hover {
@@ -1774,6 +1792,12 @@ input.search.js-show-result + .search-close + .search-result {
     font-weight: 400;
     font-size: 13px;
     line-height: 15px;
+  }
+  .info-block__main-title {
+    font-weight: 300;
+    font-size: 19px;
+    line-height: 23px;
+    margin-bottom: 15px;
   }
 }
 
@@ -2180,12 +2204,19 @@ div.input-file__file-load {
   padding-bottom: 75px;
 }
 
+.cloud-device__payment-schedule {
+  margin-bottom: 75px;
+}
+
 @media (max-width: 767px) {
   .cloud-device__status {
     margin-bottom: 50px;
   }
   .cloud-device__documents {
     padding-bottom: 50px;
+  }
+  .cloud-device__payment-schedule {
+    margin-bottom: 50px;
   }
 }
 
@@ -2305,8 +2336,12 @@ div.input-file__file-load {
   background-color: #fdd74f;
 }
 
-.cloud-card__info-3 p:first-child {
-  margin-bottom: 10px;
+.cloud-card__status.active::before {
+  background-color: #3DDC97;
+}
+
+.cloud-card__info-3 p:not(:first-child) {
+  margin-top: 10px;
 }
 
 .contract-modal-trigger:hover {
@@ -2442,8 +2477,8 @@ div.input-file__file-load {
     margin-right: 0;
     margin-top: 5px;
   }
-  .cloud-card__info-3 p:first-child {
-    margin-bottom: 5px;
+  .cloud-card__info-3 p:not(:first-child) {
+    margin-top: 5px;
   }
   .cloud-card__info-3 .info-block__desc {
     display: -webkit-box;
@@ -2502,6 +2537,27 @@ div.input-file__file-load {
 
 .cloud-status__item--cloud-plus {
   background-image: url("../img/cloud-plus-icon.svg");
+}
+
+.cloud-status__item--done {
+  position: relative;
+  background-image: none;
+}
+
+.cloud-status__item--done::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #E8F8FE;
+  background-image: url("../img/check.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .cloud-status__item-payment-type {
@@ -2619,6 +2675,15 @@ div.input-file__file-load {
   .cloud-status__item:nth-child(n) {
     margin: 0;
   }
+  .cloud-status__item--done {
+    position: relative;
+    background-image: none;
+  }
+  .cloud-status__item--done::before {
+    width: 36px;
+    height: 36px;
+    background-size: 20px 20px;
+  }
   .cloud-status__item-payment-type {
     font-weight: 300;
     font-size: 11px;
@@ -2694,6 +2759,8 @@ div.input-file__file-load {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -2802,11 +2869,11 @@ div.input-file__file-load {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  padding-bottom: 75px;
 }
 
 .first-payment__invoice {
   width: 570px;
-  padding-bottom: 75px;
   margin-right: auto;
   -ms-flex-negative: 0;
       flex-shrink: 0;
@@ -2991,8 +3058,11 @@ div.input-file__file-load {
           transform: rotate(180deg);
 }
 
-.first-payment__payment-card {
+.first-payment__payment-card-block {
   display: none;
+}
+
+.first-payment__payment-card {
   margin-bottom: 23px;
 }
 
@@ -3017,9 +3087,11 @@ div.input-file__file-load {
 }
 
 @media (max-width: 767px) {
+  .first-payment__container {
+    padding-bottom: 50px;
+  }
   .first-payment__invoice {
     padding-top: 25px;
-    padding-bottom: 50px;
   }
   .first-payment__invoice-title {
     font-weight: 300;
@@ -3529,5 +3601,824 @@ div.input-file__file-load {
     font-size: 15px;
     line-height: 23px;
     margin-bottom: 15px;
+  }
+}
+
+.subscription-modal .modal__body {
+  padding-top: 230px;
+}
+
+.subscription-modal .modal__title {
+  font-weight: 300;
+  font-size: 27px;
+  line-height: 33px;
+}
+
+.subscription-modal__bg-block {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 180px;
+  background-image: url("../img/cloud-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.subscription-modal__stages {
+  margin: 0 0 30px;
+  padding: 0;
+}
+
+.subscription-modal__stages-item {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 23px;
+  color: #444;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.subscription-modal__stages-item span {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  margin-right: 15px;
+  color: #fff;
+  border-radius: 50%;
+  background-color: #00adef;
+}
+
+.subscription-modal__toggle-list {
+  border: 1px solid #eee;
+  border-radius: 5px;
+}
+
+.subscription-modal__toggle-item {
+  margin: 0;
+  padding: 0 20px;
+}
+
+.subscription-modal__toggle-item:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+
+.subscription-modal__toggle-item-btn {
+  padding: 20px 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.subscription-modal__toggle-item-btn .info-block__toggle-icon {
+  margin-right: 15px;
+}
+
+.subscription-modal__toggle-content {
+  display: none;
+}
+
+.subscription-modal__toggle-content-list {
+  margin: 0;
+  padding-bottom: 20px;
+}
+
+.subscription-modal__toggle-content-text {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 23px;
+  color: #444;
+  padding-bottom: 20px;
+}
+
+.subscription-modal__toggle-content-item {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 23px;
+  color: #444;
+  padding-left: 23px;
+  position: relative;
+}
+
+.subscription-modal__toggle-content-item::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 0;
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #00adef;
+}
+
+.subscription-modal__toggle-content-note {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 23px;
+  color: #888;
+  padding-bottom: 20px;
+}
+
+@media (max-width: 767px) {
+  .subscription-modal__bg-block {
+    position: static;
+    height: 28vw;
+    min-height: 160px;
+    background-size: auto 100%;
+    border-radius: 0;
+  }
+  .subscription-modal .modal__body {
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 75px;
+  }
+  .subscription-modal .modal__body > *:not(.subscription-modal__bg-block) {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .subscription-modal .modal__title {
+    font-weight: 300;
+    font-size: 19px;
+    line-height: 23px;
+    padding-top: 30px;
+  }
+  .subscription-modal__toggle-item-btn {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+  }
+  .subscription-modal__stages-item, .subscription-modal__toggle-content-item, .subscription-modal__toggle-content-note, .subscription-modal__toggle-content-text {
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 19px;
+  }
+  .subscription-modal__stages-item span {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.my-comfort-modal .modal__body {
+  padding-top: 230px;
+}
+
+.my-comfort-modal .modal__title {
+  font-weight: 300;
+  font-size: 27px;
+  line-height: 33px;
+}
+
+.my-comfort-modal__bg-block {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 180px;
+  background-image: url("../img/my-comfort-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.my-comfort-modal__bg-block--plus {
+  background-image: url("../img/my-comfort-plus-bg.jpg");
+}
+
+.my-comfort-modal__bg-block--premium {
+  background-image: url("../img/my-comfort-premium-bg.jpg");
+}
+
+.my-comfort-modal__stages {
+  margin: 0;
+  padding: 0;
+}
+
+.my-comfort-modal__stages-item {
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 19px;
+  color: #444;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+}
+
+.my-comfort-modal__stages-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.my-comfort-modal__stages-item::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  background-image: url("../img/check.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.my-comfort-modal__toggle-list {
+  border: 1px solid #eee;
+  border-radius: 5px;
+}
+
+.my-comfort-modal__toggle-item {
+  margin: 0;
+  padding: 0 20px;
+}
+
+.my-comfort-modal__toggle-item:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+
+.my-comfort-modal__toggle-item-btn {
+  padding: 20px 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.my-comfort-modal__toggle-item-btn .info-block__toggle-icon {
+  margin-right: 15px;
+}
+
+.my-comfort-modal__toggle-content {
+  display: none;
+}
+
+.my-comfort-modal__toggle-content-list {
+  margin: 0;
+  padding-bottom: 20px;
+}
+
+.my-comfort-modal__toggle-content-text {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 23px;
+  color: #444;
+  padding-bottom: 20px;
+}
+
+.my-comfort-modal__toggle-content-item {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 23px;
+  color: #444;
+  padding-left: 23px;
+  position: relative;
+}
+
+.my-comfort-modal__toggle-content-item::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 0;
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #00adef;
+}
+
+.my-comfort-modal__toggle-content-note {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 23px;
+  color: #888;
+  padding-bottom: 20px;
+}
+
+@media (max-width: 767px) {
+  .my-comfort-modal__bg-block {
+    position: static;
+    height: 28vw;
+    min-height: 160px;
+    background-size: auto 100%;
+    border-radius: 0;
+  }
+  .my-comfort-modal .modal__body {
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 75px;
+  }
+  .my-comfort-modal .modal__body > *:not(.my-comfort-modal__bg-block) {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .my-comfort-modal .modal__title {
+    font-weight: 300;
+    font-size: 19px;
+    line-height: 23px;
+    padding-top: 30px;
+    margin-bottom: 15px;
+  }
+  .my-comfort-modal .modal__desc {
+    margin-bottom: 25px;
+  }
+  .my-comfort-modal__toggle-item-btn {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+  }
+  .my-comfort-modal__stages-item, .my-comfort-modal__toggle-content-item, .my-comfort-modal__toggle-content-note, .my-comfort-modal__toggle-content-text {
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 19px;
+  }
+  .my-comfort-modal__stages-item:not(:last-child) {
+    margin-bottom: 15px;
+  }
+}
+
+.successful-payment__container {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.successful-payment__logo {
+  width: 253px;
+  height: 253px;
+  margin-bottom: 30px;
+  background-image: url("../img/successful-registration.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.successful-payment__title {
+  font-weight: 300;
+  font-size: 31px;
+  line-height: 37px;
+  color: #444;
+  margin: 0 0 15px;
+  text-align: center;
+}
+
+.successful-payment__desc {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  color: #888;
+  margin: 0 0 50px;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .successful-payment__container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .successful-payment__title {
+    font-weight: 300;
+    font-size: 27px;
+    line-height: 33px;
+  }
+  .successful-payment__desc {
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 19px;
+  }
+}
+
+.payment-schedule {
+  padding-top: 50px;
+}
+
+.payment-schedule__desc {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 23px;
+  color: #888;
+  margin: 0 0 25px;
+  padding-right: calc(100% - 444px);
+}
+
+.payment-schedule__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.payment-schedule__payment {
+  width: 450px;
+  padding: 30px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+}
+
+.payment-schedule__payment-title {
+  font-weight: 300;
+  font-size: 27px;
+  line-height: 33px;
+  color: #444;
+  margin: 0 0 30px;
+}
+
+.payment-schedule__payment-desc {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 23px;
+  color: #888;
+  margin: 0 0 30px;
+}
+
+.payment-schedule__counter-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.payment-schedule__counter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 6px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+}
+
+.payment-schedule__counter-title {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 23px;
+  color: #444;
+}
+
+.payment-schedule__counter-btn {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  border: none;
+  background-color: transparent;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  font-size: 0;
+  line-height: 0;
+  background-color: #fff;
+  border-radius: 0;
+}
+
+.payment-schedule__counter-btn:hover, .payment-schedule__counter-btn:active, .payment-schedule__counter-btn:focus {
+  background-color: transparent;
+}
+
+.payment-schedule__counter-btn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 1px;
+  background-color: #444;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.payment-schedule__counter-btn--plus::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1px;
+  height: 12px;
+  background-color: #444;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.payment-schedule__counter-btn:hover::before, .payment-schedule__counter-btn:focus::before, .payment-schedule__counter-btn:hover::after, .payment-schedule__counter-btn:focus::after {
+  background-color: #000;
+}
+
+.payment-schedule__counter-btn:disabled {
+  background-color: #fff;
+}
+
+.payment-schedule__counter-btn:disabled::before, .payment-schedule__counter-btn:disabled::after {
+  background-color: #dadada;
+}
+
+.payment-schedule__counter-value {
+  min-width: 30px;
+  margin: 0 10px;
+  text-align: center;
+}
+
+.payment-schedule__payment-total {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-weight: 300;
+  font-size: 19px;
+  line-height: 23px;
+  font-weight: 300;
+  color: #444;
+  margin-bottom: 30px;
+}
+
+.payment-schedule__to-payment {
+  width: 100%;
+}
+
+.payment-schedule__table {
+  margin-top: -94px;
+}
+
+@media (max-width: 1279px) {
+  .payment-schedule__desc {
+    padding-right: 0;
+  }
+  .payment-schedule__body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .payment-schedule__payment {
+    width: 100%;
+  }
+  .payment-schedule__table {
+    margin-top: 0;
+    margin-bottom: 25px;
+  }
+}
+
+@media (max-width: 767px) {
+  .payment-schedule {
+    padding-top: 25px;
+  }
+  .payment-schedule__container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .payment-schedule__container > *:not(.payment-schedule__body) {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .payment-schedule__desc {
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 19px;
+    margin: 0 0 15px;
+  }
+  .payment-schedule__payment {
+    margin-left: 15px;
+    margin-right: 15px;
+    width: auto;
+    padding: 15px;
+  }
+  .payment-schedule__payment-title {
+    font-weight: 300;
+    font-size: 19px;
+    line-height: 23px;
+    margin: 0 0 15px;
+  }
+  .payment-schedule__payment-desc {
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 19px;
+    margin: 0 0 15px;
+  }
+  .payment-schedule__counter-block {
+    margin: 0 0 15px;
+  }
+  .payment-schedule__counter-title {
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 19px;
+  }
+  .payment-schedule__payment-total {
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 23px;
+    margin: 0 0 15px;
+  }
+}
+
+.schedule-table {
+  width: 688px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.schedule-table table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+.schedule-table table col:first-child {
+  width: 25%;
+}
+
+.schedule-table table col:nth-child(2) {
+  width: 25%;
+}
+
+.schedule-table table col:nth-child(3) {
+  width: 25%;
+}
+
+.schedule-table table col:nth-child(4) {
+  width: 25%;
+}
+
+.schedule-table table th {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15px;
+  color: #888;
+  padding: 10px 0 10px 15px;
+  background-color: #f6f6f6;
+  text-align: right;
+  border-bottom: 1px solid #eee;
+}
+
+.schedule-table table th:first-child {
+  text-align: left;
+}
+
+.schedule-table table th:last-child {
+  padding-right: 15px;
+}
+
+.schedule-table table td {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  color: #444;
+  padding: 24px 0 24px 15px;
+  text-align: right;
+  vertical-align: middle;
+}
+
+.schedule-table table td:first-child {
+  text-align: left;
+}
+
+.schedule-table table td:last-child {
+  padding-right: 15px;
+}
+
+.schedule-table table td:last-child span {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15px;
+  display: inline-block;
+  min-width: 100px;
+  padding: 3px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.schedule-table__next-payment, .schedule-table__free-replacement {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15px;
+  display: block;
+  margin-top: 5px;
+}
+
+.schedule-table__free-replacement {
+  color: #3DDC97;
+}
+
+.schedule-table__row.not-paid td:first-child {
+  color: #888;
+}
+
+.schedule-table__row.paid td:last-child span {
+  background-color: #3DDC97;
+  color: #fff;
+}
+
+.schedule-table__row.not-paid td:last-child span {
+  background-color: #f6f6f6;
+  color: #888;
+}
+
+.schedule-table__row.picked td {
+  background-color: #E8F8FE;
+}
+
+@media (max-width: 1279px) {
+  .schedule-table {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .schedule-table {
+    border: none;
+  }
+  .schedule-table table col:first-child {
+    width: calc(54% - 110px);
+  }
+  .schedule-table table col:nth-child(2) {
+    width: 23%;
+  }
+  .schedule-table table col:nth-child(3) {
+    width: 23%;
+  }
+  .schedule-table table col:nth-child(4) {
+    width: 110px;
+  }
+  .schedule-table table td:not(:first-child),
+  .schedule-table table th:not(:first-child) {
+    padding-left: 10px;
+  }
+  .schedule-table table th {
+    border-bottom: none;
+  }
+  .schedule-table table th,
+  .schedule-table table td,
+  .schedule-table table td:last-child span {
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px;
+  }
+  .schedule-table table td:last-child span {
+    min-width: 80px;
+  }
+  .schedule-table__next-payment, .schedule-table__free-replacement {
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px;
   }
 }

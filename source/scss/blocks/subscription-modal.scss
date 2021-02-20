@@ -1,0 +1,161 @@
+.subscription-modal {
+
+  & .modal__body {
+    padding-top: 230px;
+  }
+
+  & .modal__title {
+    @include h27;
+  }
+
+  &__bg-block {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 180px;
+    background-image: url("../img/cloud-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px 10px 0px 0px;
+  }
+
+  &__stages {
+    margin: 0 0 30px;
+    padding: 0;
+  }
+
+  &__stages-item {
+    @include b15;
+    color: $text-main;
+    display: flex;
+
+    & span {
+      @include h15;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+      margin-right: 15px;
+      color: #fff;
+      border-radius: 50%;
+      background-color: $primary;
+    }
+  }
+
+  &__toggle-list {
+    border: 1px solid $stroke;
+    border-radius: 5px;
+  }
+
+  &__toggle-item {
+    margin: 0;
+    padding: 0 20px;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $stroke;
+    }
+  }
+
+  &__toggle-item-btn {
+    padding: 20px 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+
+    &  .info-block__toggle-icon {
+      margin-right: 15px;
+    }
+  }
+
+  &__toggle-content {
+    display: none;
+  }
+
+  &__toggle-content-list {
+    margin: 0;
+    padding-bottom: 20px;
+  }
+
+  &__toggle-content-text {
+    @include b15;
+    color: $text-main;
+    padding-bottom: 20px;
+  }
+
+  &__toggle-content-item {
+    @include b15;
+    color: $text-main;
+    padding-left: 23px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 8px;
+      left: 0;
+      display: block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: $primary;
+    }
+  }
+
+  &__toggle-content-note {
+    @include b15;
+    color: $text-minor;
+    padding-bottom: 20px;
+  }
+}
+
+@include tablet {
+  .subscription-modal {
+    &__bg-block {
+      position: static;
+      height: 28vw;
+      min-height: 160px;
+      background-size: auto 100%;
+      border-radius: 0;
+    }
+
+    & .modal__body {
+      padding-top: 0;
+      padding-left: 0;
+      padding-right: 0;
+      padding-bottom: 75px;
+
+      & > *:not(.subscription-modal__bg-block) {
+        margin-left: 15px;
+        margin-right: 15px;
+      }
+    }
+
+    & .modal__title {
+      @include h19;
+      padding-top: 30px;
+    }
+
+    &__toggle-item-btn {
+      @include h13;
+    }
+
+    &__stages-item,
+    &__toggle-content-item,
+    &__toggle-content-note,
+    &__toggle-content-text {
+      @include b13;
+    }
+
+    &__stages-item {
+      & span {
+        @include h13;
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}

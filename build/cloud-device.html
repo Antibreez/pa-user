@@ -46,7 +46,7 @@
               <a href="#" class="breadcrumbs__link">Мои устройства</a>
             </li>
             <li class="breadcrumbs__item">
-              <a class="breadcrumbs__link  active">Daichi A25AVQ1/A25FV1</a>
+              <a class="breadcrumbs__link  active">Daikin FTXJ25MS/RXJ250M</a>
             </li>
           </ul>
         </div>
@@ -59,24 +59,24 @@
 
             <!--Фото кондиционера DESKTOP-->
             <div class="cloud-card__img-block">
-              <img src="img/device.png" alt="device">
+              <img src="img/ftxj.png" alt="ftxj">
             </div>
             <div class="cloud-card__info-wrapper">
               <div class="cloud-card__info-block-1">
 
                 <!--Фото кондиционера TABLET-->
                 <div class="cloud-card__img-block-tablet">
-                  <img src="img/device.png" alt="device">
+                  <img src="img/ftxj.png" alt="ftxj">
                 </div>
                 <div class="cloud-card__info-1-wrapper">
 
                   <!--Фото кондиционера MOBILE-->
                   <div class="cloud-card__img-block-mobile">
-                    <img src="img/device.png" alt="device">
+                    <img src="img/ftxj.png" alt="ftxj">
                   </div>
                   <div class="cloud-card__title-block">
                     <p class="cloud-card__subtitle">Облачный кондиционер</p>
-                    <h2 class="cloud-card__title">Daichi A25AVQ1/A25FV1</h2>
+                    <h2 class="cloud-card__title">Daikin FTXJ25MS/RXJ250M</h2>
                   </div>
                   <div class="cloud-card__info-1">
                     <div class="cloud-card__info-1-item  info-block__item">
@@ -101,7 +101,7 @@
               <div class="cloud-card__info-2">
                 <div class="cloud-card__info-2-item  info-block__item">
                   <p class="info-block__subtitle">Статус подписки</p>
-                  <p class="cloud-card__status  pending">В ожидании</p>
+                  <p class="cloud-card__status  active">Активна</p>
                 </div>
                 <div class="cloud-card__info-2-item  info-block__item">
                   <p class="info-block__subtitle">Ближайший платёж</p>
@@ -140,101 +140,125 @@
               </div>
             </div>
           </section>
-          <div class="cloud-device__card-note  input-block"">
+          <div class="cloud-device__card-note  input-block" "="">
             <input class="input-text" type="text" placeholder="">
             <label class="input-label">Укажите короткое примечание</label>
           </div>
         </div>
       </div>
 
-      <div class="cloud-device__status  cloud-status">
-        <div class="cloud-status__container  wrapper">
-          <ul class="cloud-status__list">
-            <li class="cloud-status__item  cloud-status__item--payment">
-              <span class="cloud-status__item-name">
-                Ожидается оплата
-              </span>
-              <span class="cloud-status__item-payment-type">Оплата онлайн</span>
-            </li>
-            <li class="cloud-status__item  cloud-status__item--fix">
-              <span class="cloud-status__item-name">
-                Заполните данные монтажной организации
-              </span>
-            </li>
-            <li class="cloud-status__item  cloud-status__item--cloud-plus">
-              <span class="cloud-status__item-name">
-                Ожидается подключение к&nbsp;облаку
-              </span>
-            </li>
-          </ul>
-
-          <div class="cloud-status__card  cloud-status__card--payment">
-            <div class="cloud-status__card-content">
-              <p class="cloud-status__card-title  info-block__title">
-                Ожидается оплата&nbsp;|  Оплата онлайн&nbsp;|  1&nbsp;устройство  |  10&nbsp;998&nbsp;руб.
+      <div class="cloud-device__payment-schedule  payment-schedule">
+        <div class="payment-schedule__container  wrapper">
+          <h2 class="payment-schedule__title  info-block__main-title">
+            График платежей
+          </h2>
+          <p class="payment-schedule__desc">
+            Ближайший платёж 25.01.2021.<br>
+            Если вы хотите оплатить раньше, воспользуйтесь формой оплаты.
+          </p>
+          <div class="payment-schedule__body">
+            <div class="payment-schedule__payment">
+              <h3 class="payment-schedule__payment-title">Оплата</h3>
+              <p class="payment-schedule__payment-desc">
+                Укажите количество платежей, которые вы хотите погасить и нажмите на кнопку, чтобы перейти к&nbsp;оплате.
               </p>
-              <p class="cloud-status__card-desc  info-block__subtitle">
-                  Для оплаты перейдите по&nbsp;ссылке, высланной Вам на&nbsp;адрес электронной почты или нажмите на&nbsp;кнопку слева
-              </p>
-            </div>
-            <a href="#" class="cloud-status__card-btn  btn-primary">Перейти к оплате</a>
-          </div>
-
-          <div class="cloud-status__card  cloud-status__card--installation">
-            <div class="cloud-status__card-content">
-              <p class="cloud-status__card-title  info-block__title">
-                Заполните данные монтажной организации
-              </p>
-              <p class="cloud-status__card-desc  info-block__subtitle">
-                Для активации подписки необходимо указать данные организации, обслуживающей установку кондиционера.
-                Компания Daichi предоставляет гарантийное обслуживание только для кондиционеров,
-                установленных авторизованной монтажной организацией
-              </p>
-            </div>
-            <div class="cloud-status__installation-form">
-              <form>
-                <div class="cloud-status__installation-company  input-block"">
-                  <input class="input-text" type="text" placeholder="Не указано">
-                  <label class="input-label">Укажите наименование организации&nbsp;*</label>
+              <div class="payment-schedule__counter-block">
+                <p class="payment-schedule__counter-title">Платежей к оплате</p>
+                <div class="payment-schedule__counter">
+                  <button class="payment-schedule__counter-btn  payment-schedule__counter-btn--minus" disabled=""></button>
+                  <span class="payment-schedule__counter-value">1</span>
+                  <button class="payment-schedule__counter-btn  payment-schedule__counter-btn--plus"></button>
                 </div>
-
-                <div class="cloud-status__installation-file  input-file">
-                  <label class="input-file__label">
-                    <input type="file" accept="image/jpeg,image/png,image/gif,application/pdf" name="contract-scan" class="input-file__input  visually-hidden">
-                    <span>Приложите документ, подтверждающий монтаж&nbsp;*</spa>
-                  </label>
-                  <div class="input-file__file-load  file-load">
-                    <div class="file-load__info">
-                      <p class="file-load__name">Файл 1</p>
-                    </div>
-                    <button type="button" class="file-load__clear">
-                      <svg width="24" height="25" viewBox="0 0 24 25" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4.29289 4.7929C4.68341 4.40238 5.31659 4.40238 5.7071 4.7929L19.8492 18.935C20.2398 19.3256 20.2398 19.9587 19.8492 20.3492C19.4587 20.7398 18.8255 20.7398 18.435 20.3492L4.29289 6.20711C3.90237 5.81659 3.90237 5.18342 4.29289 4.7929Z" />
-                        <path d="M4.29291 20.3492C4.68344 20.7398 5.31661 20.7398 5.70713 20.3492L19.8493 6.2071C20.2398 5.81659 20.2398 5.18341 19.8493 4.79289C19.4587 4.40237 18.8256 4.40237 18.435 4.79289L4.29291 18.935C3.9024 19.3255 3.90239 19.9587 4.29291 20.3492Z" />
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-
-                <button class="cloud-status__installation-form-send btn-primary" disabled>
-                  Отправить
-                </button>
-
-              </form>
+              </div>
+              <div class="payment-schedule__payment-total">
+                <span>К оплате</span>
+                <span>11 999 руб.</span>
+              </div>
+              <a href="#" class="payment-schedule__to-payment btn-primary">Перейти к оплате</a>
             </div>
-          </div>
 
-          <div class="cloud-status__card  cloud-status__card--connection">
-            <div class="cloud-status__card-content">
-              <p class="cloud-status__card-title  info-block__title">
-                Ожидается подключение к облаку
-              </p>
-              <p class="cloud-status__card-desc  info-block__subtitle">
-                Для указанного при заказе адреса E-mail создан аккаунт в&nbsp;приложении Daichi&nbsp;Comfort.
-                Авторизуйтесь в приложении и добавьте облачный кондиционер.
-              </p>
+            <div class="payment-schedule__table  schedule-table">
+              <table>
+                <colgroup>
+                  <col>
+                  <col>
+                  <col>
+                  <col>
+                </colgroup>
+                <tr>
+                  <th>Дата</th>
+                  <th>Списание</th>
+                  <th>Останется</th>
+                  <th>Статус</th>
+                </tr>
+                <tr class="schedule-table__row  paid">
+                  <td>25.01.2020</td>
+                  <td>76 999 руб.</td>
+                  <td>83 993 руб.</td>
+                  <td><span>Оплачен</span></td>
+                </tr>
+                <tr class="schedule-table__row  paid">
+                  <td>25.01.2020</td>
+                  <td>76 999 руб.</td>
+                  <td>83 993 руб.</td>
+                  <td><span>Оплачен</span></td>
+                </tr>
+                <tr class="schedule-table__row  not-paid  picked">
+                  <td>
+                    до 25.01.2020
+                    <span class="schedule-table__next-payment">
+                      Ближайший платёж
+                    </span>
+                  </td>
+                  <td>76 999 руб.</td>
+                  <td>83 993 руб.</td>
+                  <td><span>Не оплачен</span></td>
+                </tr>
+                <tr class="schedule-table__row  not-paid  picked">
+                  <td>
+                    до 25.01.2020
+                  </td>
+                  <td>76 999 руб.</td>
+                  <td>83 993 руб.</td>
+                  <td><span>Не оплачен</span></td>
+                </tr>
+                <tr class="schedule-table__row  not-paid">
+                  <td>
+                    до 25.01.2020
+                  </td>
+                  <td>76 999 руб.</td>
+                  <td>83 993 руб.</td>
+                  <td><span>Не оплачен</span></td>
+                </tr>
+                <tr class="schedule-table__row  not-paid">
+                  <td>
+                    до 25.01.2020
+                  </td>
+                  <td>76 999 руб.</td>
+                  <td>83 993 руб.</td>
+                  <td><span>Не оплачен</span></td>
+                </tr>
+                <tr class="schedule-table__row  not-paid">
+                  <td>
+                    до 25.01.2020
+                  </td>
+                  <td>76 999 руб.</td>
+                  <td>83 993 руб.</td>
+                  <td><span>Не оплачен</span></td>
+                </tr>
+                <tr class="schedule-table__row  not-paid">
+                  <td>
+                    до 25.01.2020
+                    <span class="schedule-table__free-replacement">
+                      Бесплатная замена!
+                    </span>
+                  </td>
+                  <td>76 999 руб.</td>
+                  <td>83 993 руб.</td>
+                  <td><span>Не оплачен</span></td>
+                </tr>
+              </table>
             </div>
-            <a href="#" class="cloud-status__card-btn  btn-primary">Перейти в приложение</a>
           </div>
         </div>
       </div>
@@ -249,7 +273,7 @@
                 <p class="documents__item-name">Договор Оферты КО</p>
                 <p class="documents__item-char">10МБ, PDF</p>
               </div>
-              <a href="#" class="documents__item-download" download></a>
+              <a href="#" class="documents__item-download" download=""></a>
               <a href="#" class="documents__item-preview"></a>
             </li>
             <li class="documents__item">
@@ -258,7 +282,7 @@
                 <p class="documents__item-name">Подробнее о программе</p>
                 <p class="documents__item-char">10МБ, PDF</p>
               </div>
-              <a href="#" class="documents__item-download" download></a>
+              <a href="#" class="documents__item-download" download=""></a>
               <a href="#" class="documents__item-preview"></a>
             </li>
             <li class="documents__item">
@@ -267,7 +291,7 @@
                 <p class="documents__item-name">Подробнее о программе</p>
                 <p class="documents__item-char">10МБ, PDF</p>
               </div>
-              <a href="#" class="documents__item-download" download></a>
+              <a href="#" class="documents__item-download" download=""></a>
               <a href="#" class="documents__item-preview"></a>
             </li>
           </ul>
@@ -381,7 +405,7 @@
                       <p class="documents__item-name">Условия покупки облачного кондиционера</p>
                       <p class="documents__item-char">10МБ, PDF</p>
                     </div>
-                    <a href="#" class="documents__item-download" download></a>
+                    <a href="#" class="documents__item-download" download=""></a>
                     <a href="#" class="documents__item-preview"></a>
                   </li>
                 </ul>

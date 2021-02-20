@@ -266,7 +266,6 @@
 (function () {
   var contractBtn = document.querySelector('.contract-modal-trigger');
   var modalContract = document.querySelector('.contract-modal');
-  console.log(contractBtn + '   ' + modalContract);
 
   if (!contractBtn || !modalContract) {
     return;
@@ -296,8 +295,56 @@
 })();
 
 (function () {
+  var $modalBtn = document.querySelector('.my-comfort-modal-trigger');
+  var $modal = document.getElementById('my-comfort-modal');
+
+  if (!$modalBtn || !$modal) {
+    return;
+  }
+
+  var modal = new Modal($modalBtn, $modal);
+})();
+
+(function () {
+  var $modalBtn = document.querySelector('.my-comfort-plus-modal-trigger');
+  var $modal = document.getElementById('my-comfort-plus-modal');
+
+  if (!$modalBtn || !$modal) {
+    return;
+  }
+
+  var modal = new Modal($modalBtn, $modal);
+})();
+
+(function () {
+  var $modalBtn = document.querySelector('.my-comfort-premium-modal-trigger');
+  var $modal = document.getElementById('my-comfort-premium-modal');
+
+  if (!$modalBtn || !$modal) {
+    return;
+  }
+
+  var modal = new Modal($modalBtn, $modal);
+})();
+
+(function () {
   $('.first-payment__devices-btn').on('click', function () {
     $(this).next().slideToggle();
     $(this).children('.first-payment__device-toggle-icon').toggleClass('opened');
+  });
+})();
+
+(function () {
+  var subscriptionBtn = document.querySelector('.subscription-modal-trigger');
+  var modalSubscription = document.querySelector('.subscription-modal');
+
+  if (!subscriptionBtn || !modalSubscription) {
+    return;
+  }
+
+  var modal = new Modal(subscriptionBtn, modalSubscription);
+  $('.subscription-modal__toggle-item-btn').on('click', function () {
+    $(this).next().slideToggle();
+    $(this).children('.info-block__toggle-icon').toggleClass('opened');
   });
 })();

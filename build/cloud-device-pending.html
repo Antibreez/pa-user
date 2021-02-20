@@ -115,7 +115,7 @@
                   <p class="info-block__subtitle">Номер договора</p>
                   <p class="cloud-card__contract-number  info-block__desc">
                     DA2020-11
-                    <span class="info-block__help  contract-modal-trigger"></span>
+                    <button class="info-block__help  contract-modal-trigger"></button>
                   </p>
                 </div>
               </div>
@@ -123,7 +123,19 @@
                 <p class="info-block__title">Состав подписки:</p>
                 <p class="info-block__desc">
                   <span>Подписка на облачный кондиционер 2&nbsp;999&nbsp;руб.&nbsp;/&nbsp;в&nbsp;год</span>
-                  <span class="info-block__help"></span>
+                  <button class="info-block__help  subscription-modal-trigger"></button>
+                </p>
+                <p class="info-block__desc">
+                  <span>Программа обслуживания “Мой комфорт” 3&nbsp;000&nbsp;руб.&nbsp;/&nbsp;в&nbsp;год</span>
+                  <button class="info-block__help  my-comfort-modal-trigger"></button>
+                </p>
+                <p class="info-block__desc">
+                  <span>Программа обслуживания “Мой комфорт +” 3&nbsp;000&nbsp;руб.&nbsp;/&nbsp;в&nbsp;год</span>
+                  <button class="info-block__help  my-comfort-plus-modal-trigger"></button>
+                </p>
+                <p class="info-block__desc">
+                  <span>Программа обслуживания “Мой комфорт Премиум” 3&nbsp;000&nbsp;руб.&nbsp;/&nbsp;в&nbsp;год</span>
+                  <button class="info-block__help  my-comfort-premium-modal-trigger"></button>
                 </p>
               </div>
             </div>
@@ -235,6 +247,15 @@
               <div class="documents__item-logo"></div>
               <div class="documents__item-info">
                 <p class="documents__item-name">Договор Оферты КО</p>
+                <p class="documents__item-char">10МБ, PDF</p>
+              </div>
+              <a href="#" class="documents__item-download" download=""></a>
+              <a href="#" class="documents__item-preview"></a>
+            </li>
+            <li class="documents__item">
+              <div class="documents__item-logo"></div>
+              <div class="documents__item-info">
+                <p class="documents__item-name">Подробнее о программе</p>
                 <p class="documents__item-char">10МБ, PDF</p>
               </div>
               <a href="#" class="documents__item-download" download=""></a>
@@ -376,6 +397,198 @@
                 Перейти к оплате договора
               </a>
             </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!--Модальное окно условий подписки-->
+      <section class="subscription-modal  modal">
+        <div class="modal__overlay">
+
+          <div class="modal__body">
+            <div class="subscription-modal__bg-block"></div>
+            <button class="modal__close"></button>
+            <h1 class="modal__title">
+              Климат по подписке на условиях ежегодной оплаты на срок до&nbsp;7&nbsp;лет
+            </h1>
+            <ul class="subscription-modal__stages">
+              <li class="subscription-modal__stages-item">
+                <span>1</span>
+                Оплачиваете сумму первого взноса + первый ежегодный платёж
+              </li>
+              <li class="subscription-modal__stages-item">
+                <span>2</span>
+                Устанавливаете кондиционер и подключаете к&nbsp;облачному сервису
+              </li>
+              <li class="subscription-modal__stages-item">
+                <span>3</span>
+                Платите фиксированный ежегодный платёж по подписке в&nbsp;течение 7&nbsp;лет
+              </li>
+            </ul>
+
+            <ul class="subscription-modal__toggle-list">
+              <li class="subscription-modal__toggle-item">
+                <div class="subscription-modal__toggle-item-btn">
+                  <span class="info-block__toggle-icon"></span>
+                  Что входит в подписку?
+                </div>
+                <div class="subscription-modal__toggle-content">
+                  <ul class="subscription-modal__toggle-content-list">
+                    <li class="subscription-modal__toggle-content-item">
+                      Кондиционер за 7 ежегодных платежей
+                    </li>
+                    <li class="subscription-modal__toggle-content-item">
+                      Дополнительный год гарантии
+                    </li>
+                    <li class="subscription-modal__toggle-content-item">
+                      Право бесплатной замены кондиционера на новый по итогу выплат *
+                    </li>
+                    <li class="subscription-modal__toggle-content-item">
+                      Управление через мобильное приложение с расширенным диапазоном функций и возможностей
+                    </li>
+                    <li class="subscription-modal__toggle-content-item">
+                      Связь с центром поддержки Даичи через мобильное приложение 24/7
+                    </li>
+                    <li class="subscription-modal__toggle-content-item">
+                      Круглосуточные консультации владельца кондиционера по вопросам климата
+                    </li>
+                  </ul>
+                  <p class="subscription-modal__toggle-content-note">
+                    * Бесплатная замена доступна для отдельных моделей или при заказе дополнительной услуги Мой Комфорт
+                  </p>
+                </div>
+              </li>
+              <li class="subscription-modal__toggle-item">
+                <div class="subscription-modal__toggle-item-btn">
+                  <span class="info-block__toggle-icon"></span>
+                  Условия оформления подписки
+                </div>
+                <div class="subscription-modal__toggle-content">
+                  <p class="subscription-modal__toggle-content-text">
+                    Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
+                    <br><br>
+                    Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt, ut labore et dolore magnam aliquam quaerat voluptatem.
+                  </p>
+                </div>
+              </li>
+              <li class="subscription-modal__toggle-item">
+                <div class="subscription-modal__toggle-item-btn">
+                  <span class="info-block__toggle-icon"></span>
+                  Как вносить платежи?
+                </div>
+                <div class="subscription-modal__toggle-content">
+                  <p class="subscription-modal__toggle-content-text">
+                    Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
+                  </p>
+                </div>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </section>
+
+      <!--Модальное окно Программы Мой комфорт-->
+      <section id="my-comfort-modal" class="my-comfort-modal  modal">
+        <div class="modal__overlay">
+
+          <div class="modal__body">
+            <div class="my-comfort-modal__bg-block"></div>
+            <button class="modal__close"></button>
+            <h1 class="modal__title">
+              Программа Мой комфорт
+            </h1>
+            <p class="modal__desc">
+              Бессрочная бесперебойная работа системы кондиционирования независимо от&nbsp;срока ее&nbsp;эксплуатации, а&nbsp;также право на бесплатную замену устаревшего блока на&nbsp;новый через 7&nbsp;лет.
+            </p>
+            <ul class="my-comfort-modal__stages">
+              <li class="my-comfort-modal__stages-item">
+                Бесплатная замена кондиционера на новый через 7&nbsp;лет
+              </li>
+              <li class="my-comfort-modal__stages-item">
+                Бесплатные запасные части и&nbsp;комплектующие
+              </li>
+              <li class="my-comfort-modal__stages-item">
+                Круглосуточный онлайн-мониторинг при наличии установленного Wi&#8209;Fi контроллера
+              </li>
+              <li class="my-comfort-modal__stages-item">
+                Личный ассистент по вопросам климата
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </section>
+
+      <!--Модальное окно Программы Мой комфорт Плюс-->
+      <section id="my-comfort-plus-modal" class="my-comfort-modal  modal">
+        <div class="modal__overlay">
+
+          <div class="modal__body">
+            <div class="my-comfort-modal__bg-block  my-comfort-modal__bg-block--plus"></div>
+            <button class="modal__close"></button>
+            <h1 class="modal__title">
+              Программа Мой комфорт +
+            </h1>
+            <p class="modal__desc">
+              Бессрочная бесперебойная работа системы кондиционирования независимо от&nbsp;срока ее&nbsp;эксплуатации, а&nbsp;также право на бесплатную замену устаревшего блока на&nbsp;новый через 7&nbsp;лет.
+            </p>
+            <ul class="my-comfort-modal__stages">
+              <li class="my-comfort-modal__stages-item">
+                Бесплатная замена кондиционера на новый через 7&nbsp;лет
+              </li>
+              <li class="my-comfort-modal__stages-item">
+                Бесплатный ремонт в течение 2&nbsp;дней
+              </li>
+              <li class="my-comfort-modal__stages-item">
+                Бесплатные запасные части и&nbsp;комплектующие
+              </li>
+              <li class="my-comfort-modal__stages-item">
+                Круглосуточный онлайн-мониторинг при наличии установленного Wi&#8209;Fi контроллера
+              </li>
+              <li class="my-comfort-modal__stages-item">
+                Личный ассистент по вопросам климата
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </section>
+
+      <!--Модальное окно Программы Мой комфорт Премиум-->
+      <section id="my-comfort-premium-modal" class="my-comfort-modal  modal">
+        <div class="modal__overlay">
+
+          <div class="modal__body">
+            <div class="my-comfort-modal__bg-block  my-comfort-modal__bg-block--premium"></div>
+            <button class="modal__close"></button>
+            <h1 class="modal__title">
+              Программа Мой комфорт Премиум
+            </h1>
+            <p class="modal__desc">
+              Бессрочная бесперебойная работа системы кондиционирования независимо от&nbsp;срока ее&nbsp;эксплуатации, а&nbsp;также право на бесплатную замену устаревшего блока на&nbsp;новый через 7&nbsp;лет.
+            </p>
+            <ul class="my-comfort-modal__stages">
+              <li class="my-comfort-modal__stages-item">
+                Бесплатная замена кондиционера на новый через 7&nbsp;лет
+              </li>
+              <li class="my-comfort-modal__stages-item">
+                Ежегодное бесплатное техническое обслуживание кондиционера
+              </li>
+              <li class="my-comfort-modal__stages-item">
+                Бесплатный ремонт в течение 2&nbsp;дней
+              </li>
+              <li class="my-comfort-modal__stages-item">
+                Бесплатные запасные части и&nbsp;комплектующие
+              </li>
+              <li class="my-comfort-modal__stages-item">
+                Круглосуточный онлайн-мониторинг при наличии установленного Wi&#8209;Fi контроллера
+              </li>
+              <li class="my-comfort-modal__stages-item">
+                Личный ассистент по вопросам климата
+              </li>
+            </ul>
 
           </div>
         </div>

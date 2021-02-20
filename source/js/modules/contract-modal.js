@@ -2,8 +2,6 @@
   const contractBtn = document.querySelector('.contract-modal-trigger');
   const modalContract = document.querySelector('.contract-modal');
 
-  console.log(contractBtn + '   ' + modalContract);
-
   if (!contractBtn || !modalContract) {
     return;
   }

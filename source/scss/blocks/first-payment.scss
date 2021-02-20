@@ -2,11 +2,11 @@
   &__container {
     display: flex;
     align-items: flex-start;
+    padding-bottom: 75px;
   }
 
   &__invoice {
     width: 570px;
-    padding-bottom: 75px;
     margin-right: auto;
     flex-shrink: 0;
   }
@@ -156,8 +156,11 @@
     }
   }
 
-  &__payment-card {
+  &__payment-card-block {
     display: none;
+  }
+
+  &__payment-card {
     margin-bottom: 23px;
   }
 }
@@ -186,9 +189,12 @@
 
 @include tablet {
   .first-payment {
+    &__container {
+      padding-bottom: 50px;
+    }
+
     &__invoice {
       padding-top: 25px;
-      padding-bottom: 50px;
     }
 
     &__invoice-title {

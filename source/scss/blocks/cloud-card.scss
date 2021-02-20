@@ -95,11 +95,15 @@
     &.pending::before {
       background-color: $waiting;
     }
+
+    &.active::before {
+      background-color: #3DDC97;
+    }
   }
 
   &__info-3 {
-    & p:first-child {
-      margin-bottom: 10px;
+    & p:not(:first-child) {
+      margin-top: 10px;
     }
   }
 }
@@ -243,8 +247,8 @@
     }
 
     &__info-3 {
-      & p:first-child {
-        margin-bottom: 5px;
+      & p:not(:first-child) {
+        margin-top: 5px;
       }
 
       & .info-block__desc {
