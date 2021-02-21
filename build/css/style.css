@@ -4974,6 +4974,16 @@ div.input-file__file-load {
             flex-direction: column;
     padding-bottom: 50px;
   }
+  .freez-modal .modal__body form {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
   .freez-modal__btn {
     margin-top: auto;
     width: 100%;
@@ -5017,8 +5027,29 @@ div.input-file__file-load {
             flex-direction: column;
     padding-bottom: 50px;
   }
+  .not-use-modal .modal__body form {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .not-use-modal__btn-block {
+    margin-top: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
   .not-use-modal__btn {
     margin-top: auto;
     width: 100%;
+  }
+  .not-use-modal__btn:first-child {
+    margin-right: 0;
+    margin-bottom: 5px;
   }
 }

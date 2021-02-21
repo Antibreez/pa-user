@@ -28,11 +28,27 @@
       display: flex;
       flex-direction: column;
       padding-bottom: 50px;
+
+      & form {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    &__btn-block {
+      margin-top: auto;
+      flex-direction: column;
     }
 
     &__btn {
       margin-top: auto;
       width: 100%;
+
+      &:first-child {
+        margin-right: 0;
+        margin-bottom: 5px;
+      }
     }
   }
 }
