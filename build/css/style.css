@@ -772,6 +772,14 @@ label {
   margin: 0;
 }
 
+input:not([type=checkbox]):not([type=radio]),
+textarea,
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
 .btn-primary,
 .btn-secondary {
   font-weight: 400;
@@ -4466,8 +4474,8 @@ div.input-file__file-load {
     border: none;
   }
   .schedule-table table col:first-child {
-    width: calc(54% - 110px);
-    min-width: calc(54% - 110px);
+    width: 26%;
+    min-width: 26%;
   }
   .schedule-table table col:nth-child(2) {
     width: auto;
