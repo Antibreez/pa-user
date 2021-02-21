@@ -14,7 +14,8 @@
     align-items: flex-start;
   }
 
-  &__payment {
+  &__payment,
+  &__payment-done {
     width: 450px;
     padding: 30px;
     flex-shrink: 0;
@@ -128,7 +129,28 @@
 
   &__table {
     margin-top: -94px;
-    //transform: translateY(-94px);
+  }
+
+  &__payment-done + .payment-schedule__table {
+    margin-top: 0;
+  }
+
+  &__payment-done-icon {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 30px;
+    border-radius: 50%;
+    background-image: url("../img/check-big.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &__payment-done-title {
+    @include h27;
+    font-weight: 300;
+    color: $text-main;
+    text-align: center;
   }
 }
 
@@ -149,6 +171,10 @@
     &__table {
       margin-top: 0;
       margin-bottom: 25px;
+    }
+
+    &__payment-done {
+      width: 100%;
     }
   }
 }
@@ -177,6 +203,13 @@
       margin-right: 15px;
       width: auto;
       padding: 15px;
+    }
+
+    &__payment-done {
+      width: calc(100% - 30px);
+      padding: 30px 15px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     &__payment-title {

@@ -275,16 +275,16 @@
 (function () {
   var contractBtn = document.querySelector('.contract-modal-trigger');
   var modalContract = document.querySelector('.contract-modal');
+  $('.contract-modal__toggle-btn').on('click', function () {
+    $(this).next().slideToggle();
+    $(this).children('.info-block__toggle-icon').toggleClass('opened');
+  });
 
   if (!contractBtn || !modalContract) {
     return;
   }
 
   var modal = new Modal(contractBtn, modalContract);
-  $('.contract-modal__toggle-btn').on('click', function () {
-    $(this).next().slideToggle();
-    $(this).children('.info-block__toggle-icon').toggleClass('opened');
-  });
 })();
 
 (function () {
@@ -352,14 +352,23 @@
 (function () {
   var $modalBtn = document.querySelectorAll('.device-actions__item-link--delete');
   var $modal = document.getElementById('not-use-modal');
+  var $body = document.querySelector('body');
 
   if (!$modalBtn[0] || !$modal) {
     return;
   }
 
+  var noBtn = document.querySelector('.not-use-modal__btn--no');
   $modalBtn.forEach(function (item) {
     new Modal(item, $modal);
   });
+
+  var onNoBtnClick = function onNoBtnClick() {
+    $modal.classList.remove('js-show');
+    $body.classList.remove('js__body-no-scroll');
+  };
+
+  noBtn.addEventListener('click', onNoBtnClick);
 })();
 
 (function () {
@@ -372,14 +381,14 @@
 (function () {
   var subscriptionBtn = document.querySelector('.subscription-modal-trigger');
   var modalSubscription = document.querySelector('.subscription-modal');
+  $('.subscription-modal__toggle-item-btn').on('click', function () {
+    $(this).next().slideToggle();
+    $(this).children('.info-block__toggle-icon').toggleClass('opened');
+  });
 
   if (!subscriptionBtn || !modalSubscription) {
     return;
   }
 
   var modal = new Modal(subscriptionBtn, modalSubscription);
-  $('.subscription-modal__toggle-item-btn').on('click', function () {
-    $(this).next().slideToggle();
-    $(this).children('.info-block__toggle-icon').toggleClass('opened');
-  });
 })();

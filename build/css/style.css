@@ -4092,7 +4092,7 @@ div.input-file__file-load {
           align-items: flex-start;
 }
 
-.payment-schedule__payment {
+.payment-schedule__payment, .payment-schedule__payment-done {
   width: 450px;
   padding: 30px;
   -ms-flex-negative: 0;
@@ -4244,6 +4244,30 @@ div.input-file__file-load {
   margin-top: -94px;
 }
 
+.payment-schedule__payment-done + .payment-schedule__table {
+  margin-top: 0;
+}
+
+.payment-schedule__payment-done-icon {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 30px;
+  border-radius: 50%;
+  background-image: url("../img/check-big.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.payment-schedule__payment-done-title {
+  font-weight: 300;
+  font-size: 27px;
+  line-height: 33px;
+  font-weight: 300;
+  color: #444;
+  text-align: center;
+}
+
 @media (max-width: 1279px) {
   .payment-schedule__desc {
     padding-right: 0;
@@ -4260,6 +4284,9 @@ div.input-file__file-load {
   .payment-schedule__table {
     margin-top: 0;
     margin-bottom: 25px;
+  }
+  .payment-schedule__payment-done {
+    width: 100%;
   }
 }
 
@@ -4286,6 +4313,12 @@ div.input-file__file-load {
     margin-right: 15px;
     width: auto;
     padding: 15px;
+  }
+  .payment-schedule__payment-done {
+    width: calc(100% - 30px);
+    padding: 30px 15px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .payment-schedule__payment-title {
     font-weight: 300;

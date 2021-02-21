@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Daichi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/external.css" rel="stylesheet" async="">
+  <link href="css/internal.css" rel="stylesheet" async="">
+  <link rel="stylesheet" href="css/style.min.css" type="text/css">
+  <script src="js/jquery.min.js"></script>
+</head>
+  <body>
+
+    <main class="cloud-device">
+
+      <!--Модальное окно заморозки-->
+      <section id="freez-modal" class="freez-modal  modal  js-show">
+        <div class="modal__overlay">
+
+          <div class="modal__body">
+           <form>
+              <button type="button" class="modal__close"></button>
+              <h1 class="modal__title">
+                Вы действительно хотите заморозить подписку?
+              </h1>
+              <p class="modal__desc">
+                Доступ к управлению устройством будет приостановлен на выбранный период времени
+              </p>
+
+              <div class="input-block">
+                <select name="options" class="select">
+                  <option value="" disabled="" selected="" hidden="">Не указан</option>
+                  <option value="option1">1 год</option>
+                  <option value="option2">2 год</option>
+                  <option value="option3">3 год</option>
+                  <option value="option4">4 год</option>
+                </select>
+                <label class="input-label">Выберите период приостановки</label>
+              </div>
+
+              <button class="freez-modal__btn  btn-primary">Заморозить</button>
+           </form>
+
+          </div>
+        </div>
+      </section>
+
+    </main>
+    <script src="js/vendor.min.js"></script>
+    <script src="js/external.js"></script>
+    <script src="js/internal.js"></script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

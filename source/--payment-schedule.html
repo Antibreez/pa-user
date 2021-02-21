@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Daichi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/external.css" rel="stylesheet" async="">
+  <link href="css/internal.css" rel="stylesheet" async="">
+  <link rel="stylesheet" href="css/style.min.css" type="text/css">
+  <script src="js/jquery.min.js"></script>
+</head>
+  <body>
+
+    <main class="cloud-device">
+
+      <div class="cloud-device__payment-schedule  payment-schedule">
+        <div class="payment-schedule__container  wrapper">
+          <h2 class="payment-schedule__title  info-block__main-title">
+            График платежей
+          </h2>
+          <p class="payment-schedule__desc">
+            Ближайший платёж 25.01.2021.<br>
+            Если вы хотите оплатить раньше, воспользуйтесь формой оплаты.
+          </p>
+          <div class="payment-schedule__body">
+            <div class="payment-schedule__payment">
+              <h3 class="payment-schedule__payment-title">Оплата</h3>
+              <p class="payment-schedule__payment-desc">
+                Укажите количество платежей, которые вы хотите погасить и нажмите на кнопку, чтобы перейти к&nbsp;оплате.
+              </p>
+              <div class="payment-schedule__counter-block">
+                <p class="payment-schedule__counter-title">Платежей к оплате</p>
+                <div class="payment-schedule__counter">
+                  <button class="payment-schedule__counter-btn  payment-schedule__counter-btn--minus" disabled></button>
+                  <span class="payment-schedule__counter-value">1</span>
+                  <button class="payment-schedule__counter-btn  payment-schedule__counter-btn--plus"></button>
+                </div>
+              </div>
+              <div class="payment-schedule__payment-total">
+                <span>К оплате</span>
+                <span>11 999 руб.</span>
+              </div>
+              <a href="#" class="payment-schedule__to-payment btn-primary">Перейти к оплате</a>
+            </div>
+
+            <div class="payment-schedule__table  schedule-table">
+              <table>
+                <colgroup>
+                  <col>
+                  <col>
+                  <col>
+                  <col>
+                </colgroup>
+                <tr>
+                  <th>Дата</th>
+                  <th>Списание</th>
+                  <th>Останется</th>
+                  <th>Статус</th>
+                </tr>
+                <tr class="schedule-table__row  paid">
+                  <td>25.01.2020</td>
+                  <td>76 999 руб.</td>
+                  <td>83 993 руб.</td>
+                  <td><span>Оплачен</span></td>
+                </tr>
+                <tr class="schedule-table__row  paid">
+                  <td>25.01.2020</td>
+                  <td>76 999 руб.</td>
+                  <td>83 993 руб.</td>
+                  <td><span>Оплачен</span></td>
+                </tr>
+                <tr class="schedule-table__row  not-paid  picked">
+                  <td>
+                    до 25.01.2020
+                    <span class="schedule-table__next-payment">
+                      Ближайший платёж
+                    </span>
+                  </td>
+                  <td>76 999 руб.</td>
+                  <td>83 993 руб.</td>
+                  <td><span>Не оплачен</span></td>
+                </tr>
+                <tr class="schedule-table__row  not-paid  picked">
+                  <td>
+                    до 25.01.2020
+                  </td>
+                  <td>76 999 руб.</td>
+                  <td>83 993 руб.</td>
+                  <td><span>Не оплачен</span></td>
+                </tr>
+                <tr class="schedule-table__row  not-paid">
+                  <td>
+                    до 25.01.2020
+                  </td>
+                  <td>76 999 руб.</td>
+                  <td>83 993 руб.</td>
+                  <td><span>Не оплачен</span></td>
+                </tr>
+                <tr class="schedule-table__row  not-paid">
+                  <td>
+                    до 25.01.2020
+                  </td>
+                  <td>76 999 руб.</td>
+                  <td>83 993 руб.</td>
+                  <td><span>Не оплачен</span></td>
+                </tr>
+                <tr class="schedule-table__row  not-paid">
+                  <td>
+                    до 25.01.2020
+                  </td>
+                  <td>76 999 руб.</td>
+                  <td>83 993 руб.</td>
+                  <td><span>Не оплачен</span></td>
+                </tr>
+                <tr class="schedule-table__row  not-paid">
+                  <td>
+                    до 25.01.2020
+                    <span class="schedule-table__free-replacement">
+                      Бесплатная замена!
+                    </span>
+                  </td>
+                  <td>76 999 руб.</td>
+                  <td>83 993 руб.</td>
+                  <td><span>Не оплачен</span></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cloud-device__payment-schedule  payment-schedule">
+        <div class="payment-schedule__container  wrapper">
+          <h2 class="payment-schedule__title  info-block__main-title">
+            График платежей
+          </h2>
+          <div class="payment-schedule__body">
+            <div class="payment-schedule__payment-done">
+              <div class="payment-schedule__payment-done-icon"></div>
+              <p class="payment-schedule__payment-done-title">
+                Подписка оплачена
+              </p>
+            </div>
+
+            <div class="payment-schedule__table  schedule-table">
+              <table>
+                <colgroup>
+                  <col>
+                  <col>
+                  <col>
+                  <col>
+                </colgroup>
+                <tr>
+                  <th>Дата</th>
+                  <th>Списание</th>
+                  <th>Останется</th>
+                  <th>Статус</th>
+                </tr>
+                <tr class="schedule-table__row  paid">
+                  <td>25.01.2020</td>
+                  <td>76 999 руб.</td>
+                  <td>83 993 руб.</td>
+                  <td><span>Оплачен</span></td>
+                </tr>
+                <tr class="schedule-table__row  paid">
+                  <td>25.01.2020</td>
+                  <td>76 999 руб.</td>
+                  <td>83 993 руб.</td>
+                  <td><span>Оплачен</span></td>
+                </tr>
+                <tr class="schedule-table__row  paid">
+                  <td>
+                    до 25.01.2020
+                  </td>
+                  <td>76 999 руб.</td>
+                  <td>83 993 руб.</td>
+                  <td><span>Оплачен</span></td>
+                </tr>
+                <tr class="schedule-table__row  paid">
+                  <td>
+                    до 25.01.2020
+                  </td>
+                  <td>76 999 руб.</td>
+                  <td>83 993 руб.</td>
+                  <td><span>Оплачен</span></td>
+                </tr>
+                <tr class="schedule-table__row  paid">
+                  <td>
+                    до 25.01.2020
+                  </td>
+                  <td>76 999 руб.</td>
+                  <td>83 993 руб.</td>
+                  <td><span>Оплачен</span></td>
+                </tr>
+                <tr class="schedule-table__row  paid">
+                  <td>
+                    до 25.01.2020
+                  </td>
+                  <td>76 999 руб.</td>
+                  <td>83 993 руб.</td>
+                  <td><span>Оплачен</span></td>
+                </tr>
+                <tr class="schedule-table__row  paid">
+                  <td>
+                    до 25.01.2020
+                  </td>
+                  <td>76 999 руб.</td>
+                  <td>83 993 руб.</td>
+                  <td><span>Оплачен</span></td>
+                </tr>
+                <tr class="schedule-table__row  paid">
+                  <td>
+                    до 25.01.2020
+                    <span class="schedule-table__free-replacement">
+                      Бесплатная замена!
+                    </span>
+                  </td>
+                  <td>76 999 руб.</td>
+                  <td>83 993 руб.</td>
+                  <td><span>Оплачен</span></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </main>
+    <script src="js/vendor.min.js"></script>
+    <script src="js/external.js"></script>
+    <script src="js/internal.js"></script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>
