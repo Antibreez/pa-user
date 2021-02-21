@@ -116,14 +116,15 @@
       & col {
         &:first-child {
           width: calc(54% - 110px);
+          min-width: calc(54% - 110px);
         }
 
         &:nth-child(2) {
-          width: 23%;
+          width: auto;
         }
 
         &:nth-child(3) {
-          width: 23%;
+          width: auto;
         }
 
         &:nth-child(4) {
