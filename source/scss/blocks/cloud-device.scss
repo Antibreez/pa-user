@@ -1,5 +1,5 @@
 .cloud-device {
-  margin-bottom: 75px;
+  padding-bottom: 75px;
 
   &__card {
     margin-bottom: 25px;
@@ -28,6 +28,20 @@
   &__free-replacement {
     margin-bottom: 75px;
   }
+
+  &__device-connection {
+    margin-bottom: 75px;
+  }
+
+  &__device-address {
+    margin-bottom: 75px;
+  }
+
+  &__messages-desc {
+    @include b15;
+    color: $text-minor;
+    margin: 0 0 30px;
+  }
 }
 
 @include tablet {
@@ -50,6 +64,19 @@
 
     &__free-replacement {
       margin-bottom: 50px;
+    }
+
+    &__device-connection {
+      margin-bottom: 50px;
+    }
+
+    &__device-address {
+      margin-bottom: 50px;
+    }
+
+    &__messages-desc {
+      @include b13;
+      margin: 0 0 15px;
     }
   }
 }

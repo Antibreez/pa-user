@@ -1,0 +1,142 @@
+.device-connection {
+  &__card {
+    padding: 30px 30px 30px 180px;
+    margin-bottom: 25px;
+    border: 1px solid $stroke;
+    border-radius: 5px;
+    background-image: url("../img/app-logo.svg");
+    background-repeat: no-repeat;
+    background-position: left 30px center;
+  }
+
+  &__card-title-block {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-bottom: 30px;
+  }
+
+  &__card-subtitle {
+    @include b15;
+    color: $text-minor;
+    margin: 0 10px 2px 0;
+  }
+
+  &__card-status {
+    @include h13;
+    color: $text-main;
+    display: inline-block;
+    padding: 3px 12px;
+    border-radius: 5px;
+    margin-left: auto;
+
+    &.connected {
+      background-color: #E8F8FE;
+    }
+  }
+
+  &__card-title {
+    @include h27;
+    font-weight: 300;
+    margin: 0;
+    width: 100%;
+  }
+
+  &__details {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__details-item {
+    width: calc((100% - 45px) / 4);
+  }
+
+  &__actions {
+    display: flex;
+
+    & .device-actions__item:not(:nth-child(3n)) {
+      margin-right: 15px;
+    }
+  }
+}
+
+.device-connection.not-connected {
+  & .device-connection__card {
+    background-image: url("../img/app-logo-grey.svg");
+  }
+
+  & .device-connection__card * {
+    color: #dadada;
+  }
+}
+
+@include desktop {
+  .device-connection {
+    &__details {
+      flex-wrap: wrap;
+    }
+
+    &__details-item {
+      width: calc((100% - 15px) / 2);
+
+      &:last-child,
+      &:nth-last-child(2) {
+        margin-top: 20px;
+      }
+    }
+
+    &__actions {
+      display: flex;
+
+      & .device-actions__item:nth-child(n) {
+        margin-right: 0;
+      }
+
+      & .device-actions__item:not(:nth-child(2n)) {
+        margin-right: 15px;
+      }
+    }
+  }
+}
+
+@include tablet {
+  .device-connection {
+    &__card {
+      padding: 15px 0;
+      border: none;
+      background-size: 80px 80px;
+      background-position: top 15px left;
+    }
+
+    &__card-title-block {
+      min-height: 80px;
+      flex-direction: column;
+      padding-left: 95px;
+      margin-bottom: 15px;
+    }
+
+    &__card-subtitle {
+      @include b11;
+    }
+
+    &__card-title {
+      @include b15;
+    }
+
+    &__card-status {
+      @include h11;
+      order: -1;
+      margin-bottom: 4px;
+    }
+
+    &__actions {
+      display: flex;
+
+      & .device-actions__item:nth-child(n) {
+        width: calc(30% - 5px);
+        min-width: 111px;
+        margin-right: 5px;
+      }
+    }
+  }
+}

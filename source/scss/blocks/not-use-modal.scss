@@ -1,0 +1,38 @@
+.not-use-modal {
+  & .modal__title {
+    padding-right: 50px;
+  }
+
+  &__btn-block {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+  }
+
+  &__btn {
+    display: block;
+    width: 250px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    &:first-child {
+      margin-right: 15px;
+    }
+  }
+}
+
+@include tablet {
+  .not-use-modal {
+    & .modal__body {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 50px;
+    }
+
+    &__btn {
+      margin-top: auto;
+      width: 100%;
+    }
+  }
+}
