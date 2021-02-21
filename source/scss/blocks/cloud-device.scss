@@ -20,6 +20,14 @@
   &__payment-schedule {
     margin-bottom: 75px;
   }
+
+  &__actions {
+    margin-bottom: 50px;
+  }
+
+  &__free-replacement {
+    margin-bottom: 75px;
+  }
 }
 
 @include tablet {
@@ -33,6 +41,14 @@
     }
 
     &__payment-schedule {
+      margin-bottom: 50px;
+    }
+
+    &__actions {
+      margin-bottom: 15px;
+    }
+
+    &__free-replacement {
       margin-bottom: 50px;
     }
   }

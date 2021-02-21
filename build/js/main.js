@@ -214,6 +214,15 @@
 })();
 
 (function () {
+  $(window).load(function () {
+    var swiper = new Swiper('.device-actions__slider-container', {
+      freeMode: true,
+      slidesPerView: 'auto'
+    });
+  });
+})();
+
+(function () {
   var form = document.querySelector('.cloud-status__installation-form');
 
   if (!form) {
