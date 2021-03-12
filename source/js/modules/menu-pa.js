@@ -1,5 +1,5 @@
 (() => {
-  $(window).load(function () {
+  $(window).on('load', function () {
     const swiper = new Swiper('.menu-pa__container', {
       freeMode: true,
       slidesPerView: 'auto',

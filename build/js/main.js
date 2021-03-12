@@ -214,7 +214,7 @@
 })();
 
 (function () {
-  $(window).load(function () {
+  $(window).on('load', function () {
     var swiper = new Swiper('.device-actions__slider-container', {
       freeMode: true,
       slidesPerView: 'auto'
@@ -301,7 +301,7 @@
 })();
 
 (function () {
-  $(window).load(function () {
+  $(window).on('load', function () {
     var swiper = new Swiper('.menu-pa__container', {
       freeMode: true,
       slidesPerView: 'auto',
