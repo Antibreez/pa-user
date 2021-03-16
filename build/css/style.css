@@ -2548,6 +2548,10 @@ div.input-file__file-load {
   }
 }
 
+.cloud-status .alert-note {
+  color: #ff0000;
+}
+
 .cloud-status__list {
   padding: 20px 0;
   margin: 0;
@@ -2693,8 +2697,50 @@ div.input-file__file-load {
 }
 
 .cloud-status__installation-company {
+  position: relative;
   width: 100%;
   margin-bottom: 20px;
+}
+
+.cloud-status__installation-company-result {
+  position: absolute;
+  display: none;
+  top: 100%;
+  left: 0;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  z-index: 20;
+  width: 100%;
+}
+
+.cloud-status__installation-company-result.active {
+  display: block;
+}
+
+.cloud-status__installation-company-list {
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  max-height: 212px;
+}
+
+.cloud-status__installation-company-item {
+  padding: 15px;
+  margin: 0;
+  color: #888;
+  line-height: 22px;
+}
+
+.cloud-status__installation-company-item:hover {
+  cursor: pointer;
+  background-color: #f6f6f6;
+}
+
+.cloud-status__installation-company-item .matches {
+  color: #444;
+  font-weight: 400;
 }
 
 .cloud-status__installation-file {
@@ -2788,6 +2834,14 @@ div.input-file__file-load {
   }
   .cloud-status__installation-company {
     margin-bottom: 15px;
+  }
+  .cloud-status__installation-company-list {
+    max-height: 184px;
+  }
+  .cloud-status__installation-company-item {
+    padding: 13px 15px;
+    font-size: 13px;
+    line-height: 20px;
   }
   .cloud-status__installation-file {
     margin-right: 0;
