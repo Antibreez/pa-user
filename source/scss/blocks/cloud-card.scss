@@ -99,6 +99,22 @@
     &.active::before {
       background-color: #3DDC97;
     }
+
+    &.expires::before {
+      background-color: #FDD74F;
+    }
+
+    &.frozen::before {
+      background-color: #E8F8FE;
+    }
+
+    &.expired::before {
+      background-color: #FF9900;
+    }
+
+    &.blocking::before {
+      background-color: #FF0000;
+    }
   }
 
   &__info-3 {

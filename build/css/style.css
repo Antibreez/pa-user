@@ -2390,6 +2390,22 @@ div.input-file__file-load {
   background-color: #3DDC97;
 }
 
+.cloud-card__status.expires::before {
+  background-color: #FDD74F;
+}
+
+.cloud-card__status.frozen::before {
+  background-color: #E8F8FE;
+}
+
+.cloud-card__status.expired::before {
+  background-color: #FF9900;
+}
+
+.cloud-card__status.blocking::before {
+  background-color: #FF0000;
+}
+
 .cloud-card__info-3 p:not(:first-child) {
   margin-top: 10px;
 }
@@ -4515,6 +4531,14 @@ div.input-file__file-load {
 
 .schedule-table__row.picked td {
   background-color: #E8F8FE;
+}
+
+.schedule-table__row.blocked td:first-child {
+  color: #FF0000;
+}
+
+.schedule-table__row.blocked .schedule-table__next-payment {
+  color: #888;
 }
 
 @media (max-width: 1279px) {
