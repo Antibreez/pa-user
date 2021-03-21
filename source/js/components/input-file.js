@@ -66,10 +66,12 @@
         reader.onload = function (e) {
           fileDropArea.parentNode.classList.add('loaded');
           fileDropArea
-            .nextElementSibling
+            .parentNode
             .querySelector('.file-load__name')
             .textContent = input.files[0].name;
-            window.onInstallationFileDrop && window.onInstallationFileDrop();
+
+          window.onInstallationFileDrop && window.onInstallationFileDrop();
+          window.onPassportFileDrop && window.onPassportFileDrop();
         }
 
         reader.readAsDataURL(input.files[0]);

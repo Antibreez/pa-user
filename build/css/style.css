@@ -1831,8 +1831,8 @@ input.search.js-show-result + .search-close + .search-result {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: border-color 0.3s;
+  transition: border-color 0.3s;
   margin: 0;
 }
 
@@ -1907,10 +1907,18 @@ div.input-file__file-load {
   line-height: 23px;
   margin: 0;
   color: #444;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -moz-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-clamp: 2;
+  box-orient: vertical;
 }
 
 .file-load__info {
   padding-right: 10px;
+  max-width: calc(100% - 24px);
 }
 
 .file-load__size {
@@ -2601,6 +2609,10 @@ div.input-file__file-load {
   background-image: url("../img/rub-icon.svg");
 }
 
+.cloud-status__item--passport {
+  background-image: url("../img/passport-icon.svg");
+}
+
 .cloud-status__item--fix {
   background-image: url("../img/fix-icon.svg");
 }
@@ -2655,6 +2667,44 @@ div.input-file__file-load {
   margin-bottom: 15px;
 }
 
+.cloud-status__card--passport {
+  margin-bottom: 15px;
+}
+
+.cloud-status__card--passport form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  max-width: 100%;
+}
+
+.cloud-status__card--passport .cloud-status__card-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-right: 0;
+}
+
+.cloud-status__card--passport .cloud-status__card-content .cloud-status__card-content-wrapper {
+  margin-right: 25px;
+}
+
+.cloud-status__card--passport .cloud-status__card-content .cloud-status__card-btn {
+  margin-left: auto;
+}
+
+.cloud-status__card--passport .cloud-status__card-btn--mobile {
+  display: none;
+}
+
 .cloud-status__card--installation {
   margin-bottom: 15px;
   -ms-flex-wrap: wrap;
@@ -2663,6 +2713,10 @@ div.input-file__file-load {
 
 .cloud-status__card--payment .cloud-status__card-content {
   background-image: url("../img/rub-icon.svg");
+}
+
+.cloud-status__card--passport .cloud-status__card-content {
+  background-image: url("../img/passport-icon.svg");
 }
 
 .cloud-status__card--installation .cloud-status__card-content {
@@ -2691,6 +2745,90 @@ div.input-file__file-load {
 .cloud-status__card-btn {
   -ms-flex-negative: 0;
       flex-shrink: 0;
+  margin-left: auto;
+}
+
+.cloud-status__upload-files {
+  margin-top: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.cloud-status__upload-file {
+  width: calc((100% - 25px) / 2);
+}
+
+.cloud-status__upload-file .input-file__label {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 15px;
+  min-height: 273px;
+}
+
+.cloud-status__upload-file .input-file__icon {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 25px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.cloud-status__upload-file .input-file__icon--passport {
+  background-image: url("../img/passport-big-icon.svg");
+}
+
+.cloud-status__upload-file .input-file__icon--person-with-passport {
+  background-image: url("../img/person-with-passport-icon.svg");
+}
+
+.cloud-status__upload-file .input-file__title {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  color: #444;
+  margin: 0 0 5px;
+}
+
+.cloud-status__upload-file .file-load__name {
+  text-align: left;
+}
+
+.cloud-status__upload-file.loaded .input-file__label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 15px;
+}
+
+.cloud-status__upload-file.loaded .input-file__label:hover {
+  border: 1px solid #00adef;
+}
+
+.cloud-status__upload-file.loaded .input-file__file-load {
+  width: 100%;
+  margin-top: 25px;
+}
+
+.cloud-status__upload-file.loaded .input-file__file-load:hover {
+  border: 1px solid #eee;
+}
+
+.cloud-status__upload-file.loaded .input-file__icon--passport,
+.cloud-status__upload-file.loaded .input-file__icon--person-with-passport {
+  background-image: url("../img/check-big.svg");
 }
 
 .cloud-status__installation-form {
@@ -2764,6 +2902,7 @@ div.input-file__file-load {
       -ms-flex-positive: 1;
           flex-grow: 1;
   margin-right: 20px;
+  max-width: 100%;
 }
 
 .cloud-status__installation-form-send {
@@ -2771,21 +2910,34 @@ div.input-file__file-load {
       flex-shrink: 0;
 }
 
+@media (max-width: 1279px) {
+  .cloud-status__item {
+    width: 20%;
+    max-width: 220px;
+  }
+}
+
 @media (max-width: 767px) {
   .cloud-status__list {
-    padding: 15px 0;
+    padding: 15px 0 10px;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    max-width: 380px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
   }
   .cloud-status__item {
-    width: 32%;
-    max-width: 220px;
+    width: 45%;
     padding-top: 51px;
     background-size: 36px 36px;
   }
   .cloud-status__item:nth-child(n) {
     margin: 0;
+    margin-bottom: 30px;
   }
   .cloud-status__item--done {
     position: relative;
@@ -2816,6 +2968,12 @@ div.input-file__file-load {
         -ms-flex-align: start;
             align-items: flex-start;
   }
+  .cloud-status__card--passport .cloud-status__card-btn--desktop {
+    display: none;
+  }
+  .cloud-status__card--passport .cloud-status__card-btn--mobile {
+    display: block;
+  }
   .cloud-status__card-content {
     padding-left: 0;
     background-size: 36px 36px;
@@ -2835,6 +2993,38 @@ div.input-file__file-load {
   .cloud-status__card-btn {
     margin-top: 15px;
     width: 100%;
+  }
+  .cloud-status__upload-files {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: 15px;
+  }
+  .cloud-status__upload-file {
+    width: 100%;
+  }
+  .cloud-status__upload-file:first-child {
+    margin-bottom: 15px;
+  }
+  .cloud-status__upload-file .input-file__icon {
+    margin-bottom: 15px;
+  }
+  .cloud-status__upload-file .input-file__label {
+    min-height: 250px;
+  }
+  .cloud-status__upload-file .input-file__title {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+  }
+  .cloud-status__upload-file .input-file__desc {
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 19px;
+  }
+  .cloud-status__upload-file .file-load__name {
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 19px;
   }
   .cloud-status__installation-form {
     padding: 15px;

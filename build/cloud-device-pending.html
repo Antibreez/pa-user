@@ -156,6 +156,11 @@
               </span>
               <span class="cloud-status__item-payment-type">Оплата онлайн</span>
             </li>
+            <li class="cloud-status__item  cloud-status__item--passport">
+              <span class="cloud-status__item-name">
+                Отправьте Ваши паспортные данные
+              </span>
+            </li>
             <li class="cloud-status__item  cloud-status__item--fix">
               <span class="cloud-status__item-name">
                 Заполните данные монтажной организации
@@ -179,6 +184,77 @@
             </div>
             <a href="#" class="cloud-status__card-btn  btn-primary">Перейти к оплате</a>
           </div>
+
+          <div class="cloud-status__card  cloud-status__card--passport">
+            <form>
+              <div class="cloud-status__card-content">
+                <div class="cloud-status__card-content-wrapper">
+                  <p class="cloud-status__card-title  info-block__title">
+                    Отправьте фото паспорта и&nbsp;селфи с&nbsp;паспортом
+                  </p>
+                  <p class="cloud-status__card-desc  info-block__subtitle">
+                    Для активации подписки необходимо прислать фото или скан разворота страницы паспорта с&nbsp;фото, а&nbsp;также селфи с&nbsp;паспортом
+                  </p>
+                </div>
+                <button type="submit" class="cloud-status__card-btn  cloud-status__card-btn--desktop  btn-primary" disabled="">Отправить</button>
+              </div>
+
+              <div class="cloud-status__upload-files">
+
+                <div class="cloud-status__upload-file  input-file">
+                  <label class="input-file__label">
+                    <input type="file" accept="image/jpeg,image/png,image/gif,application/pdf" name="passport-photo" class="input-file__input  visually-hidden">
+                    <div class="input-file__icon  input-file__icon--passport"></div>
+                    <p class="input-file__title">Загрузите фото паспорта <span class="alert-note">*</span></p>
+                    <p class="input-file__desc">
+                      Фото или скан разворота страницы Вашего паспорта с фото
+                    </p>
+                    <div class="input-file__file-load  file-load">
+                      <div class="file-load__info">
+                        <p class="file-load__name">Файл 1</p>
+                      </div>
+                      <button type="button" class="file-load__clear">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z" fill="#F6F6F6"></path>
+                          <path d="M7 8.179L10.72 11.899L7 15.619L8.179 16.798L13.078 11.899L8.179 7L7 8.179Z" fill="#888888"></path>
+                          <path d="M16.838 15.619L13.118 11.899L16.838 8.179L15.659 7L10.76 11.899L15.659 16.798L16.838 15.619Z" fill="#888888"></path>
+                          </svg>
+                      </button>
+                    </div>
+                  </label>
+                </div>
+
+                <div class="cloud-status__upload-file  input-file">
+                  <label class="input-file__label">
+                    <input type="file" accept="image/jpeg,image/png,image/gif,application/pdf" name="person-with-passport-photo" class="input-file__input  visually-hidden">
+                    <div class="input-file__icon  input-file__icon--person-with-passport"></div>
+                    <p class="input-file__title">Загрузите селфи с паспортом <span class="alert-note">*</span></p>
+                    <p class="input-file__desc">
+                      Фото с паспортом, на котором хорошо видно Ваше лицо
+                    </p>
+                    <div class="input-file__file-load  file-load">
+                      <div class="file-load__info">
+                        <p class="file-load__name">Файл 1</p>
+                      </div>
+                      <button type="button" class="file-load__clear">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z" fill="#F6F6F6"></path>
+                          <path d="M7 8.179L10.72 11.899L7 15.619L8.179 16.798L13.078 11.899L8.179 7L7 8.179Z" fill="#888888"></path>
+                          <path d="M16.838 15.619L13.118 11.899L16.838 8.179L15.659 7L10.76 11.899L15.659 16.798L16.838 15.619Z" fill="#888888"></path>
+                          </svg>
+                      </button>
+                    </div>
+                  </label>
+                </div>
+
+              </div>
+
+              <button type="submit" class="cloud-status__card-btn  cloud-status__card-btn--mobile  btn-primary" disabled="">Отправить</button>
+            </form>
+          </div>
+
+
+
 
           <div class="cloud-status__card  cloud-status__card--installation">
             <div class="cloud-status__card-content">

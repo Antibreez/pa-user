@@ -29,6 +29,10 @@
       background-image: url("../img/rub-icon.svg");
     }
 
+    &--passport {
+      background-image: url("../img/passport-icon.svg");
+    }
+
     &--fix {
       background-image: url("../img/fix-icon.svg");
     }
@@ -76,6 +80,35 @@
       margin-bottom: 15px;
     }
 
+    &--passport {
+      margin-bottom: 15px;
+
+      form {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        max-width: 100%;
+      }
+
+      .cloud-status__card-content {
+        display: flex;
+        align-items: flex-start;
+        margin-right: 0;
+
+        .cloud-status__card-content-wrapper {
+          margin-right: 25px;
+        }
+
+        .cloud-status__card-btn {
+          margin-left: auto;
+        }
+      }
+
+      .cloud-status__card-btn--mobile {
+        display: none;
+      }
+    }
+
     &--installation {
       margin-bottom: 15px;
       flex-wrap: wrap;
@@ -83,6 +116,10 @@
 
     &--payment .cloud-status__card-content {
       background-image: url("../img/rub-icon.svg");
+    }
+
+    &--passport .cloud-status__card-content {
+      background-image: url("../img/passport-icon.svg");
     }
 
     &--installation .cloud-status__card-content {
@@ -109,6 +146,77 @@
 
   &__card-btn {
     flex-shrink: 0;
+    margin-left: auto;
+  }
+
+  &__upload-files {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__upload-file {
+    width: calc((100% - 25px) / 2);
+
+    .input-file__label {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 15px;
+      min-height: 273px;
+    }
+
+    .input-file__icon {
+      width: 64px;
+      height: 64px;
+      margin-bottom: 25px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    .input-file__icon--passport {
+      background-image: url('../img/passport-big-icon.svg');
+    }
+
+    .input-file__icon--person-with-passport {
+      background-image: url('../img/person-with-passport-icon.svg');
+    }
+
+    .input-file__title {
+      @include h15;
+      color: $text-main;
+      margin: 0 0 5px;
+    }
+
+    .file-load__name {
+      text-align: left;
+    }
+  }
+
+  &__upload-file.loaded {
+    .input-file__label {
+      display: flex;
+      padding: 15px;
+
+      &:hover {
+        border: 1px solid $primary;
+      }
+    }
+
+    .input-file__file-load {
+      width: 100%;
+      margin-top: 25px;
+
+      &:hover {
+        border: 1px solid #eee;
+      }
+    }
+
+    .input-file__icon--passport,
+    .input-file__icon--person-with-passport {
+      background-image: url('../img/check-big.svg');
+    }
   }
 
   &__installation-form {
@@ -174,6 +282,7 @@
   &__installation-file {
     flex-grow: 1;
     margin-right: 20px;
+    max-width: 100%;
   }
 
   &__installation-form-send {
@@ -181,21 +290,35 @@
   }
 }
 
+@include desktop {
+  .cloud-status {
+    &__item {
+      width: 20%;
+      max-width: 220px;
+    }
+  }
+}
+
 @include tablet {
   .cloud-status {
     &__list {
-      padding: 15px 0;
+      padding: 15px 0 10px;
       justify-content: space-between;
+      flex-wrap: wrap;
+      max-width: 380px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 0;
     }
 
     &__item {
-      width: 32%;
-      max-width: 220px;
+      width: 45%;
       padding-top: 51px;
       background-size: 36px 36px;
 
       &:nth-child(n) {
         margin: 0;
+        margin-bottom: 30px;
       }
 
       &--done {
@@ -222,6 +345,15 @@
       padding: 15px;
       flex-direction: column;
       align-items: flex-start;
+
+      &--passport {
+        .cloud-status__card-btn--desktop {
+          display: none;
+        }
+        .cloud-status__card-btn--mobile {
+          display: block;
+        }
+      }
     }
 
     &__card-content {
@@ -241,6 +373,39 @@
     &__card-btn {
       margin-top: 15px;
       width: 100%;
+    }
+
+    &__upload-files {
+      flex-wrap: wrap;
+      margin-top: 15px;
+    }
+
+    &__upload-file {
+      width: 100%;
+
+      &:first-child {
+        margin-bottom: 15px;
+      }
+
+      .input-file__icon {
+        margin-bottom: 15px;
+      }
+
+      .input-file__label {
+        min-height: 250px;
+      }
+
+      .input-file__title {
+        @include h13;
+      }
+
+      .input-file__desc {
+        @include b13;
+      }
+
+      .file-load__name {
+        @include b13;
+      }
     }
 
     &__installation-form {

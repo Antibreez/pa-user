@@ -68,8 +68,9 @@
 
         reader.onload = function (e) {
           fileDropArea.parentNode.classList.add('loaded');
-          fileDropArea.nextElementSibling.querySelector('.file-load__name').textContent = input.files[0].name;
+          fileDropArea.parentNode.querySelector('.file-load__name').textContent = input.files[0].name;
           window.onInstallationFileDrop && window.onInstallationFileDrop();
+          window.onPassportFileDrop && window.onPassportFileDrop();
         };
 
         reader.readAsDataURL(input.files[0]);
@@ -369,6 +370,62 @@
   };
 
   noBtn.addEventListener('click', onNoBtnClick);
+})();
+
+(function () {
+  var uploadFiles = document.querySelector('.cloud-status__card--passport');
+
+  if (!uploadFiles) {
+    return;
+  }
+
+  var file1 = uploadFiles.querySelector('input[name="passport-photo"]');
+  var file2 = uploadFiles.querySelector('input[name="person-with-passport-photo"]');
+  var clearFile = uploadFiles.querySelectorAll('.file-load__clear');
+  var sendBtn1 = uploadFiles.querySelector('.cloud-status__card-btn--desktop');
+  var sendBtn2 = uploadFiles.querySelector('.cloud-status__card-btn--mobile');
+
+  var isFormFilled = function isFormFilled() {
+    var filled = true;
+
+    if (file1.value === '' || file2.value === '') {
+      filled = false;
+    }
+
+    return filled;
+  };
+
+  var checkInputs = function checkInputs() {
+    if (isFormFilled()) {
+      sendBtn1.hasAttribute('disabled') && sendBtn1.removeAttribute('disabled');
+      sendBtn2.hasAttribute('disabled') && sendBtn2.removeAttribute('disabled');
+    }
+
+    if (!isFormFilled()) {
+      !sendBtn1.hasAttribute('disabled') && sendBtn1.setAttribute('disabled', '');
+      !sendBtn2.hasAttribute('disabled') && sendBtn2.setAttribute('disabled', '');
+    }
+  };
+
+  var onFileClear = function onFileClear() {
+    if (!sendBtn1.hasAttribute('disabled')) {
+      sendBtn1.setAttribute('disabled', '');
+    }
+
+    if (!sendBtn2.hasAttribute('disabled')) {
+      sendBtn2.setAttribute('disabled', '');
+    }
+  };
+
+  window.onPassportFileDrop = function () {
+    checkInputs();
+  };
+
+  file1.addEventListener('change', window.onPassportFileDrop);
+  file2.addEventListener('change', window.onPassportFileDrop);
+  clearFile.forEach(function (item) {
+    item.addEventListener('click', onFileClear);
+  });
 })();
 
 (function () {
