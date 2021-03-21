@@ -4845,16 +4845,32 @@ div.input-file__file-load {
   background-image: url("../img/fix-icon.svg");
 }
 
+.device-actions__item-link--service:not(:disabled):hover {
+  background-image: url("../img/fix-icon-hover.svg");
+}
+
 .device-actions__item-link--repair {
   background-image: url("../img/repair-icon.svg");
+}
+
+.device-actions__item-link--repair:not(:disabled):hover {
+  background-image: url("../img/repair-icon-hover.svg");
 }
 
 .device-actions__item-link--freez {
   background-image: url("../img/freez-icon.svg");
 }
 
+.device-actions__item-link--freez:not(:disabled):hover {
+  background-image: url("../img/freez-icon-hover.svg");
+}
+
 .device-actions__item-link--delete {
   background-image: url("../img/not-use-icon.svg");
+}
+
+.device-actions__item-link--delete:not(:disabled):hover {
+  background-image: url("../img/not-use-icon-hover.svg");
 }
 
 .device-actions__item-link--control {
@@ -4865,12 +4881,20 @@ div.input-file__file-load {
   display: none;
 }
 
+.device-actions__item-link--control:not(:disabled):hover {
+  background-image: url("../img/control-icon-hover.svg");
+}
+
 .device-actions__item-link--alert {
   background-image: url("../img/alert-icon.svg");
 }
 
 .device-actions__item-link--alert span:last-child {
   display: none;
+}
+
+.device-actions__item-link--alert:not(:disabled):hover {
+  background-image: url("../img/alert-icon-hover.svg");
 }
 
 .device-actions__slider-container {

@@ -42,18 +42,34 @@
 
     &--service {
       background-image: url("../img/fix-icon.svg");
+
+      &:not(:disabled):hover {
+        background-image: url("../img/fix-icon-hover.svg");
+      }
     }
 
     &--repair {
       background-image: url("../img/repair-icon.svg");
+
+      &:not(:disabled):hover {
+        background-image: url("../img/repair-icon-hover.svg");
+      }
     }
 
     &--freez {
       background-image: url("../img/freez-icon.svg");
+
+      &:not(:disabled):hover {
+        background-image: url("../img/freez-icon-hover.svg");
+      }
     }
 
     &--delete {
       background-image: url("../img/not-use-icon.svg");
+
+      &:not(:disabled):hover {
+        background-image: url("../img/not-use-icon-hover.svg");
+      }
     }
 
     &--control {
@@ -61,12 +77,20 @@
       & span:last-child {
         display: none;
       }
+
+      &:not(:disabled):hover {
+        background-image: url("../img/control-icon-hover.svg");
+      }
     }
 
     &--alert {
       background-image: url("../img/alert-icon.svg");
       & span:last-child {
         display: none;
+      }
+
+      &:not(:disabled):hover {
+        background-image: url("../img/alert-icon-hover.svg");
       }
     }
   }
