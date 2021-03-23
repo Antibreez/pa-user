@@ -4786,15 +4786,16 @@ div.input-file__file-load {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .device-actions__item {
   margin: 0;
   width: calc((100% - 30px) / 3);
   margin-bottom: 15px;
+}
+
+.device-actions__item:not(:nth-child(3n)) {
+  margin-right: 15px;
 }
 
 .device-actions__item-link {
@@ -4904,6 +4905,12 @@ div.input-file__file-load {
 @media (max-width: 1279px) {
   .device-actions__item {
     width: calc((100% - 15px) / 2);
+  }
+  .device-actions__item:not(:nth-child(3n)) {
+    margin-right: 0;
+  }
+  .device-actions__item:nth-child(2n + 1) {
+    margin-right: 15px;
   }
 }
 
