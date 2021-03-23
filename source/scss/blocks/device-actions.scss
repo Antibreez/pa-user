@@ -37,10 +37,18 @@
       box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.05);
     }
 
+    .device-actions__progress-bar {
+      display: none;
+    }
+
     &:disabled {
       box-shadow: none;
       opacity: 0.3;
       background-color: #fff;
+
+      .device-actions__progress-bar {
+        display: block;
+      }
     }
 
     &--service {
@@ -75,6 +83,14 @@
       }
     }
 
+    &--return {
+      background-image: url("../img/return-icon.svg");
+
+      &:not(:disabled):hover {
+        background-image: url("../img/return-icon-hover.svg");
+      }
+    }
+
     &--control {
       background-image: url("../img/control-icon.svg");
       & span:last-child {
@@ -96,6 +112,78 @@
         background-image: url("../img/alert-icon-hover.svg");
       }
     }
+
+    &--replacement {
+      position: relative;
+      display: block;
+      text-align: left;
+      background-image: url("../img/replacement-icon-default.svg");
+
+      &:not(:disabled):hover {
+        background-image: url("../img/replacement-icon-active.svg");
+      }
+
+      &:disabled {
+        fill: none;
+        opacity: 1;
+        background-image: url("../img/replacement-icon-inactive.svg");
+        background-color: #f6f6f6;
+
+        span:first-of-type {
+          color: #888888;
+        }
+
+        span:nth-of-type(2) {
+          color: #888888;
+          font-size: 13px;
+          line-height: 19px;
+          font-weight: 300;
+        }
+      }
+    }
+
+    &--free-service {
+      position: relative;
+      display: block;
+      text-align: left;
+      background-image: url("../img/fix-icon.svg");
+
+      &:not(:disabled):hover {
+        background-image: url("../img/fix-icon-hover.svg");
+      }
+
+      &:disabled {
+        fill: none;
+        opacity: 1;
+        background-image: url("../img/fix-icon-inactive.svg");
+        background-color: #f6f6f6;
+
+        span:first-of-type {
+          color: #888888;
+        }
+
+        span:nth-of-type(2) {
+          color: #888888;
+          font-size: 13px;
+          line-height: 19px;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+
+  &__progressbar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 5px;
+    width: 100%;
+    background-color: #eee;
+  }
+
+  &__progressbar-current {
+    height: 100%;
+    background: linear-gradient(90deg, #D5D3FF 26.8%, #5EA9FF 100%);
   }
 
   &__slider-container {
@@ -173,6 +261,16 @@
 
         & span:first-child {
           display: none;
+        }
+      }
+
+      &--replacement {
+
+        &:disabled {
+
+          span:nth-of-type(2) {
+            display: none;
+          }
         }
       }
     }
