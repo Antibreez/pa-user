@@ -51,6 +51,14 @@
       }
     }
 
+    &--form {
+      background-image: url("../img/pencil-icon.svg");
+
+      &:not(:disabled):hover {
+        background-image: url("../img/pencil-icon-hover.svg");
+      }
+    }
+
     &--service {
       background-image: url("../img/fix-icon.svg");
 

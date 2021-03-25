@@ -4903,6 +4903,14 @@ div.input-file__file-load {
   display: block;
 }
 
+.device-actions__item-link--form {
+  background-image: url("../img/pencil-icon.svg");
+}
+
+.device-actions__item-link--form:not(:disabled):hover {
+  background-image: url("../img/pencil-icon-hover.svg");
+}
+
 .device-actions__item-link--service {
   background-image: url("../img/fix-icon.svg");
 }
