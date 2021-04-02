@@ -2507,14 +2507,31 @@ div.input-file__file-load {
 }
 
 @media (max-width: 975px) {
-  .cloud-card__info-1 {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .cloud-card__info-1-item:nth-child(n) {
+  .cloud-card__info-1-item:nth-child(1), .cloud-card__info-1-item:nth-child(3) {
     width: 100%;
+  }
+  .cloud-card__info-1-item:nth-child(2), .cloud-card__info-1-item:nth-child(4) {
+    width: 50%;
+  }
+  .cloud-card__info-1-item:nth-child(1) {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .cloud-card__info-1-item:nth-child(3) {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .cloud-card__info-1-item:nth-child(2) {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+  .cloud-card__info-1-item:nth-child(4) {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
   }
 }
 
@@ -2575,6 +2592,10 @@ div.input-file__file-load {
   .cloud-card__info-1-item:nth-child(n) {
     margin-right: 0;
   }
+  .cloud-card__info-1-item p:last-child {
+    font-size: 11px;
+    line-height: 16px;
+  }
   .cloud-card__info-1 {
     padding-bottom: 15px;
     border-bottom: 1px solid #eee;
@@ -2603,6 +2624,10 @@ div.input-file__file-load {
   .cloud-card__info-2-item:nth-child(n) {
     margin-right: 0;
     margin-top: 5px;
+  }
+  .cloud-card__info-3 {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
   }
   .cloud-card__info-3 p:not(:first-child) {
     margin-top: 5px;
