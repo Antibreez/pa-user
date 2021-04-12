@@ -173,7 +173,11 @@
     return;
   }
 
-  var im = new Inputmask("+7(999) 999-99-99");
+  var im = new Inputmask("+7(999) 999-99-99", {
+    onBeforeMask: function onBeforeMask(value, opts) {
+      return value;
+    }
+  });
   inputs.forEach(function (item) {
     im.mask(item);
   });
