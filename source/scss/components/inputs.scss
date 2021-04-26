@@ -107,12 +107,12 @@ input.input-text:focus {
   background-color: #fff;
 }
 
-input.input-text:invalid,
+// input.input-text:invalid,
 input.input-text.js-invalid {
   border-color: $alert;
 }
 
-input.input-text:invalid + label.input-label + p.input-note,
+// input.input-text:invalid + label.input-label + p.input-note,
 input.input-text.js-invalid + label.input-label + p.input-note {
   color: $alert;
 }

@@ -1088,12 +1088,10 @@ input.input-text:focus {
   background-color: #fff;
 }
 
-input.input-text:invalid,
 input.input-text.js-invalid {
   border-color: #ff0000;
 }
 
-input.input-text:invalid + label.input-label + p.input-note,
 input.input-text.js-invalid + label.input-label + p.input-note {
   color: #ff0000;
 }
