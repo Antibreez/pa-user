@@ -5407,8 +5407,8 @@ div.input-file__file-load {
   .device-connection__details-item {
     width: calc((100% - 15px) / 2);
   }
-  .device-connection__details-item:last-child, .device-connection__details-item:nth-last-child(2) {
-    margin-top: 20px;
+  .device-connection__details-item:nth-child(1), .device-connection__details-item:nth-child(2) {
+    margin-bottom: 20px;
   }
   .device-connection__actions {
     display: -webkit-box;
