@@ -4959,7 +4959,7 @@ div.input-file__file-load {
   background-image: url("../img/pencil-icon.svg");
 }
 
-.device-actions__item-link--form:not(:disabled):hover {
+.device-actions__item-link--form:not(:disabled):hover, .device-actions__item-link--form:not(:disabled):active, .device-actions__item-link--form:not(:disabled):focus {
   background-image: url("../img/pencil-icon-hover.svg");
 }
 
@@ -4967,7 +4967,7 @@ div.input-file__file-load {
   background-image: url("../img/fix-icon.svg");
 }
 
-.device-actions__item-link--service:not(:disabled):hover {
+.device-actions__item-link--service:not(:disabled):hover, .device-actions__item-link--service:not(:disabled):active, .device-actions__item-link--service:not(:disabled):focus {
   background-image: url("../img/fix-icon-hover.svg");
 }
 
@@ -4975,7 +4975,7 @@ div.input-file__file-load {
   background-image: url("../img/repair-icon.svg");
 }
 
-.device-actions__item-link--repair:not(:disabled):hover {
+.device-actions__item-link--repair:not(:disabled):hover, .device-actions__item-link--repair:not(:disabled):active, .device-actions__item-link--repair:not(:disabled):focus {
   background-image: url("../img/repair-icon-hover.svg");
 }
 
@@ -4983,7 +4983,7 @@ div.input-file__file-load {
   background-image: url("../img/freez-icon.svg");
 }
 
-.device-actions__item-link--freez:not(:disabled):hover {
+.device-actions__item-link--freez:not(:disabled):hover, .device-actions__item-link--freez:not(:disabled):active, .device-actions__item-link--freez:not(:disabled):focus {
   background-image: url("../img/freez-icon-hover.svg");
 }
 
@@ -4991,7 +4991,7 @@ div.input-file__file-load {
   background-image: url("../img/not-use-icon.svg");
 }
 
-.device-actions__item-link--delete:not(:disabled):hover {
+.device-actions__item-link--delete:not(:disabled):hover, .device-actions__item-link--delete:not(:disabled):active, .device-actions__item-link--delete:not(:disabled):focus {
   background-image: url("../img/not-use-icon-hover.svg");
 }
 
@@ -4999,7 +4999,7 @@ div.input-file__file-load {
   background-image: url("../img/return-icon.svg");
 }
 
-.device-actions__item-link--return:not(:disabled):hover {
+.device-actions__item-link--return:not(:disabled):hover, .device-actions__item-link--return:not(:disabled):active, .device-actions__item-link--return:not(:disabled):focus {
   background-image: url("../img/return-icon-hover.svg");
 }
 
@@ -5011,7 +5011,7 @@ div.input-file__file-load {
   display: none;
 }
 
-.device-actions__item-link--control:not(:disabled):hover {
+.device-actions__item-link--control:not(:disabled):hover, .device-actions__item-link--control:not(:disabled):active, .device-actions__item-link--control:not(:disabled):focus {
   background-image: url("../img/control-icon-hover.svg");
 }
 
@@ -5023,7 +5023,7 @@ div.input-file__file-load {
   display: none;
 }
 
-.device-actions__item-link--alert:not(:disabled):hover {
+.device-actions__item-link--alert:not(:disabled):hover, .device-actions__item-link--alert:not(:disabled):active, .device-actions__item-link--alert:not(:disabled):focus {
   background-image: url("../img/alert-icon-hover.svg");
 }
 
@@ -5034,7 +5034,7 @@ div.input-file__file-load {
   background-image: url("../img/replacement-icon-default.svg");
 }
 
-.device-actions__item-link--replacement:not(:disabled):hover {
+.device-actions__item-link--replacement:not(:disabled):hover, .device-actions__item-link--replacement:not(:disabled):active, .device-actions__item-link--replacement:not(:disabled):focus {
   background-image: url("../img/replacement-icon-active.svg");
 }
 
@@ -5063,7 +5063,7 @@ div.input-file__file-load {
   background-image: url("../img/fix-icon.svg");
 }
 
-.device-actions__item-link--free-service:not(:disabled):hover {
+.device-actions__item-link--free-service:not(:disabled):hover, .device-actions__item-link--free-service:not(:disabled):active, .device-actions__item-link--free-service:not(:disabled):focus {
   background-image: url("../img/fix-icon-hover.svg");
 }
 

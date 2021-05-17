@@ -54,7 +54,9 @@
     &--form {
       background-image: url("../img/pencil-icon.svg");
 
-      &:not(:disabled):hover {
+      &:not(:disabled):hover,
+      &:not(:disabled):active,
+      &:not(:disabled):focus {
         background-image: url("../img/pencil-icon-hover.svg");
       }
     }
@@ -62,7 +64,9 @@
     &--service {
       background-image: url("../img/fix-icon.svg");
 
-      &:not(:disabled):hover {
+      &:not(:disabled):hover,
+      &:not(:disabled):active,
+      &:not(:disabled):focus {
         background-image: url("../img/fix-icon-hover.svg");
       }
     }
@@ -70,7 +74,9 @@
     &--repair {
       background-image: url("../img/repair-icon.svg");
 
-      &:not(:disabled):hover {
+      &:not(:disabled):hover,
+      &:not(:disabled):active,
+      &:not(:disabled):focus {
         background-image: url("../img/repair-icon-hover.svg");
       }
     }
@@ -78,7 +84,9 @@
     &--freez {
       background-image: url("../img/freez-icon.svg");
 
-      &:not(:disabled):hover {
+      &:not(:disabled):hover,
+      &:not(:disabled):active,
+      &:not(:disabled):focus {
         background-image: url("../img/freez-icon-hover.svg");
       }
     }
@@ -86,7 +94,9 @@
     &--delete {
       background-image: url("../img/not-use-icon.svg");
 
-      &:not(:disabled):hover {
+      &:not(:disabled):hover,
+      &:not(:disabled):active,
+      &:not(:disabled):focus {
         background-image: url("../img/not-use-icon-hover.svg");
       }
     }
@@ -94,7 +104,9 @@
     &--return {
       background-image: url("../img/return-icon.svg");
 
-      &:not(:disabled):hover {
+      &:not(:disabled):hover,
+      &:not(:disabled):active,
+      &:not(:disabled):focus {
         background-image: url("../img/return-icon-hover.svg");
       }
     }
@@ -105,7 +117,9 @@
         display: none;
       }
 
-      &:not(:disabled):hover {
+      &:not(:disabled):hover,
+      &:not(:disabled):active,
+      &:not(:disabled):focus {
         background-image: url("../img/control-icon-hover.svg");
       }
     }
@@ -116,7 +130,9 @@
         display: none;
       }
 
-      &:not(:disabled):hover {
+      &:not(:disabled):hover,
+      &:not(:disabled):active,
+      &:not(:disabled):focus {
         background-image: url("../img/alert-icon-hover.svg");
       }
     }
@@ -127,7 +143,9 @@
       text-align: left;
       background-image: url("../img/replacement-icon-default.svg");
 
-      &:not(:disabled):hover {
+      &:not(:disabled):hover,
+      &:not(:disabled):active,
+      &:not(:disabled):focus {
         background-image: url("../img/replacement-icon-active.svg");
       }
 
@@ -156,7 +174,9 @@
       text-align: left;
       background-image: url("../img/fix-icon.svg");
 
-      &:not(:disabled):hover {
+      &:not(:disabled):hover,
+      &:not(:disabled):active,
+      &:not(:disabled):focus {
         background-image: url("../img/fix-icon-hover.svg");
       }
 
